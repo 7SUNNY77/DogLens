@@ -1,0 +1,140 @@
+{
+  "generated_at_utc": "2026-10-13T17:17:01Z",
+  "command": "scripts/train.py --smoke-test",
+  "status": "passed",
+  "seed": 42,
+  "environment": {
+    "python": "3.11.15",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "torch": "2.14.1+cpu",
+    "torchvision": "0.29.1+cpu",
+    "device": "cpu",
+    "torch_num_threads": 16
+  },
+  "config": "configs\\training.yaml",
+  "manifest_sha256": "396b1f630f414f18aee16c8839e815dcb66c0e4563010cac61051d8fbdb843ed",
+  "mapping_sha256": "d9779c772bfe36c56de40cdcaf7c61e8be334ba2a1407828cb5e2c8b0a9c3c5f",
+  "pretrained_sha256": "7f5810bc96def8f7552d5b7e68d53c4786f81167d28291b21c0d90e1fca14934",
+  "preprocessing": {
+    "resize_size": 256,
+    "crop_size": 224,
+    "interpolation": "bicubic",
+    "antialias": true,
+    "mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "source": "torchvision.models.EfficientNet_B0_Weights.IMAGENET1K_V1.transforms()",
+    "order": [
+      "resize_shorter_side(resize_size, interpolation, antialias) on the PIL image",
+      "center_crop(crop_size)",
+      "pil_to_tensor (uint8, CHW)",
+      "convert_image_dtype(float32) -> [0, 1]",
+      "normalize(mean, std)"
+    ],
+    "schema_version": 1
+  },
+  "checkpoint": "artifacts/smoke/smoke_checkpoint.pt",
+  "checkpoint_sha256": "c26f35ef99526415a7b5dd0bfdc890a58e276e197079e786e0de236acd140210",
+  "note": "pipeline check on a tiny subset; not a quality metric",
+  "full_training_time_estimate": {
+    "basis": "smoke-test medians on this machine; excludes validation passes; rough",
+    "train_batches_per_epoch": 597,
+    "stage_a_epoch_min": 5.3,
+    "stage_b_epoch_min": 8.0
+  },
+  "checks": {
+    "trainable_params_head": 153720,
+    "output_shape": [
+      16,
+      120
+    ],
+    "head_bn_stats_unchanged": true,
+    "overfit_loss_ratio": 2.7885367861643864e-08,
+    "trainable_params_finetune": 3309460,
+    "finetune_frozen_block_unchanged": true,
+    "finetune_unfrozen_block_changed": true,
+    "finetune_bn_stats_unchanged": true,
+    "reload_max_abs_logit_diff": 0.0,
+    "reload_predictions_equal": true,
+    "all_losses_finite": true
+  },
+  "losses": {
+    "head": [
+      4.868316173553467,
+      4.771968364715576,
+      4.782837867736816,
+      4.764786243438721,
+      4.762940406799316,
+      4.852456092834473,
+      4.718388080596924,
+      4.7187395095825195,
+      4.780738830566406,
+      4.8748955726623535,
+      4.763940811157227,
+      4.795749187469482,
+      4.6318488121032715,
+      4.609481334686279,
+      4.625002384185791
+    ],
+    "overfit": [
+      4.007789611816406,
+      1.4489212036132812,
+      0.21834701299667358,
+      0.03190019726753235,
+      0.005697368178516626,
+      0.001409617136232555,
+      0.0004251317004673183,
+      0.000152434193296358,
+      7.241540151881054e-05,
+      3.3548603823874146e-05,
+      3.089566234848462e-05,
+      1.110123957914766e-05,
+      6.958799531275872e-06,
+      5.26752137375297e-06,
+      2.3990796762518585e-06,
+      1.8924424693977926e-06,
+      1.2889489653389319e-06,
+      9.983766631194158e-07,
+      1.2814972478736308e-06,
+      6.407493629012606e-07,
+      5.960459930065554e-07,
+      4.0978173387884453e-07,
+      4.991885589333833e-07,
+      2.1606678046737215e-07,
+      1.4901158351676713e-07,
+      2.458690460116486e-07,
+      1.4156101713069802e-07,
+      2.1606678046737215e-07,
+      1.713633110966839e-07,
+      3.2037462460721144e-07,
+      1.415610029198433e-07,
+      1.0430811414607888e-07,
+      9.685753354915505e-08,
+      1.3411042232291948e-07,
+      1.0430809993522416e-07,
+      6.70552182668871e-08,
+      7.450579886381092e-08,
+      8.940695295223122e-08,
+      1.0430811414607888e-07,
+      1.1175868763757535e-07
+    ],
+    "finetune": [
+      3.1292415769712534e-07,
+      4.470348002882929e-08
+    ]
+  },
+  "timing_s": {
+    "total": 24.58018979999906,
+    "head_step_median": 0.358634100000927,
+    "head_batch_wall_mean": 0.5341434999999668,
+    "finetune_step_median": 0.6235314500008826
+  },
+  "subset_size": 240
+}

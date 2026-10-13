@@ -1,0 +1,104 @@
+{
+  "generated_at_utc": "2026-10-13T19:43:41Z",
+  "command": "scripts/benchmark.py --image data/images/Images/n02085620-Chihuahua/n02085620_10074.jpg --roi 25,10,277,499 --report reports/benchmark/inference_stanford_333x500_roi.json",
+  "device": "cpu",
+  "torch_num_threads": 16,
+  "platform": "Windows-10-10.0.26200-SP0",
+  "processor": "Intel64 Family 6 Model 170 Stepping 4, GenuineIntel",
+  "versions": {
+    "python": "3.11.15",
+    "torch": "2.14.1+cpu",
+    "torchvision": "0.29.1+cpu"
+  },
+  "bundle": {
+    "dir": "artifacts/model_bundle",
+    "model_version": "doglens-effb0-effb0-seed42-exp1-de6c9770",
+    "files_sha256": {
+      "class_mapping.json": "4a08f34cee0f517cea4803988a7a73be6f9094c43373be9889ca9a3691ee6b87",
+      "metadata.json": "954d8f6f37f173bcec3643203a35f6d50e91ed1393b06d95917918bd3261812e",
+      "metrics.json": "049c986981862034c399ecd8562ab7a07e7b3c29617c15deebcdf0b668cf089e",
+      "weights.pt": "de6c9770242e2047aedb0b48055772f7052a5376a4a9bb1ca654c3223d807393"
+    }
+  },
+  "input": {
+    "image": "data/images/Images/n02085620-Chihuahua/n02085620_10074.jpg",
+    "bytes": 27034,
+    "size_after_exif": [
+      333,
+      500
+    ],
+    "user_roi": [
+      25,
+      10,
+      277,
+      499
+    ],
+    "crop_box": [
+      0,
+      0,
+      303,
+      500
+    ],
+    "crop_size": [
+      303,
+      500
+    ],
+    "model_input": [
+      1,
+      3,
+      224,
+      224
+    ],
+    "roi_policy": "user ROI (validated, >= min side, before context) is expanded by `context` of its width on left/right and of its height on top/bottom, floor/ceil, clipped to the image; roi=None uses the whole image without any expansion (context=0.1)"
+  },
+  "batch_size": 1,
+  "warmup": 5,
+  "repeats": 30,
+  "cold": {
+    "imports_s": 7.623021699999754,
+    "bundle_load_s": 0.31676299999980984
+  },
+  "warm": {
+    "decode_validate": {
+      "median_ms": 1.972850000129256,
+      "p95_ms": 2.3476000001210195,
+      "mean_ms": 2.019783333359252,
+      "min_ms": 1.7358999998577929,
+      "max_ms": 2.678599999853759,
+      "n": 30
+    },
+    "preprocessing": {
+      "median_ms": 4.686700000092969,
+      "p95_ms": 6.390600000031554,
+      "mean_ms": 4.825379999980821,
+      "min_ms": 3.329300000132207,
+      "max_ms": 6.595299999844428,
+      "n": 30
+    },
+    "model_forward": {
+      "median_ms": 19.851699999890116,
+      "p95_ms": 24.112699999932374,
+      "mean_ms": 20.00132333332658,
+      "min_ms": 16.212800000175775,
+      "max_ms": 25.93890000025567,
+      "n": 30
+    },
+    "predict_total": {
+      "median_ms": 24.923100000023624,
+      "p95_ms": 31.037199999900622,
+      "mean_ms": 25.768219999978708,
+      "min_ms": 20.9472999999889,
+      "max_ms": 32.543100000111735,
+      "n": 30
+    },
+    "decode_plus_predict": {
+      "median_ms": 26.477599999680024,
+      "p95_ms": 35.00209999992876,
+      "mean_ms": 26.95451999996597,
+      "min_ms": 21.557700000357727,
+      "max_ms": 35.56109999999535,
+      "n": 30
+    }
+  },
+  "target_note": "goal: warm inference <= 3 s (orientation, not a guarantee)"
+}

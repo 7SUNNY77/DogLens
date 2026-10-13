@@ -1,0 +1,21 @@
+{
+  "dataset": "Stanford Dogs Dataset (Khosla, Jayadevaprakash, Yao, Fei-Fei; FGVC Workshop, CVPR 2011)",
+  "official_page": "http://vision.stanford.edu/aditya86/ImageNetDogs/main.html",
+  "archive_url": "http://vision.stanford.edu/aditya86/ImageNetDogs/lists.tar",
+  "retrieved_at_utc": "2026-10-13T16:19:55Z",
+  "archive_file": "data/lists.tar",
+  "archive_bytes": 481280,
+  "archive_sha256": "34b47cacd9a98b5d150e084f24d29391c084c55272295ec65c85651bc35f4d6c",
+  "server_last_modified": "Tue, 17 Jan 2012 22:53:00 GMT",
+  "independent_checksum_match": "sha256 and size equal to tensorflow_datasets/datasets/stanford_dogs/checksums.tsv (GitHub, master)",
+  "retrieval_note": "Local DNS returned NXDOMAIN for vision.stanford.edu; the host was resolved via DNS-over-HTTPS (Cloudflare and Google both: CNAME ai.stanford.edu -> 171.64.68.10) and fetched over plain HTTP, the scheme used by the official page link (HTTPS on that IP presents a certificate for another name). Authenticity is supported by the independent TFDS checksum match.",
+  "extracted_members": [
+    "file_list.mat",
+    "train_list.mat",
+    "test_list.mat"
+  ],
+  "extraction_checks": "regular files only, no absolute paths, no '..', single path component, tarfile filter='data'",
+  "images_and_annotations": "pre-existing local copies in data/images/Images and data/annotations/Annotation; not re-downloaded, not modified",
+  "terms": "The official page (checked 2026-10-13) gives authors and citations but no explicit license; it states the dataset was built from ImageNet images and annotations. ImageNet's terms of access (non-commercial research/educational use) were NOT re-verified in this project. Images are not redistributed by this repository.",
+  "citation": "Aditya Khosla, Nityananda Jayadevaprakash, Bangpeng Yao and Li Fei-Fei. Novel dataset for Fine-Grained Image Categorization. First Workshop on Fine-Grained Visual Categorization (FGVC), CVPR 2011. Secondary: J. Deng et al., ImageNet: A Large-Scale Hierarchical Image Database. CVPR 2009."
+}

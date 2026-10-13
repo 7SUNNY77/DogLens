@@ -1,0 +1,25 @@
+{
+  "resize_size": 256,
+  "crop_size": 224,
+  "interpolation": "bicubic",
+  "antialias": true,
+  "mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "source": "torchvision.models.EfficientNet_B0_Weights.IMAGENET1K_V1.transforms()",
+  "order": [
+    "resize_shorter_side(resize_size, interpolation, antialias) on the PIL image",
+    "center_crop(crop_size)",
+    "pil_to_tensor (uint8, CHW)",
+    "convert_image_dtype(float32) -> [0, 1]",
+    "normalize(mean, std)"
+  ],
+  "schema_version": 1
+}

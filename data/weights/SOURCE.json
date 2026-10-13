@@ -1,0 +1,28 @@
+{
+  "weights_enum": "torchvision.models.EfficientNet_B0_Weights.IMAGENET1K_V1",
+  "url": "https://download.pytorch.org/models/efficientnet_b0_rwightman-7f5810bc.pth",
+  "file": "data/weights/efficientnet_b0_rwightman-7f5810bc.pth",
+  "retrieved_at_utc": "2026-10-13T17:05:04Z",
+  "bytes": 21444401,
+  "size_mib": 20.451,
+  "expected_size_mib_torchvision_meta": 20.451,
+  "sha256": "7f5810bc96def8f7552d5b7e68d53c4786f81167d28291b21c0d90e1fca14934",
+  "checks": [
+    "sha256 starts with 7f5810bc (prefix in the torchvision file name), verified by torch.hub.download_url_to_file(hash_prefix=...) and again after download",
+    "size equals torchvision meta _file_size (20.451 MiB)",
+    "strict load_state_dict into torchvision efficientnet_b0(weights=None) succeeded",
+    "parameter count equals torchvision meta num_params (5288548); state_dict additionally holds 42065 BatchNorm buffer values"
+  ],
+  "num_params": 5288548,
+  "imagenet1k_reference_metrics": {
+    "ImageNet-1K": {
+      "acc@1": 77.692,
+      "acc@5": 93.532
+    }
+  },
+  "recipe": "https://github.com/pytorch/vision/tree/main/references/classification#efficientnet-v1",
+  "torch": "2.14.1+cpu",
+  "torchvision": "0.29.1+cpu",
+  "note": "Trained on ImageNet-1k, which contains the source images of Stanford Dogs (possible overlap with the test split).",
+  "load_policy": "loaded only from this local file with torch.load(weights_only=True) for training; the app never downloads or loads these pretrained weights"
+}

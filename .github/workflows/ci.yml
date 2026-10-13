@@ -1,0 +1,40 @@
+# Lint and the default test suite. No dataset, no trained bundle, no GPU, no training:
+# tests that need real data or the real model are marked `integration` and deselected by default.
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install uv (version used to create uv.lock)
+        run: python -m pip install uv==0.11.7
+
+      - name: Install dependencies from the lockfile
+        run: uv sync --frozen --python 3.11
+
+      - name: Ruff lint
+        run: uv run ruff check .
+
+      - name: Ruff format check
+        run: uv run ruff format --check .
+
+      - name: Tests (default suite, CPU)
+        run: uv run pytest -q

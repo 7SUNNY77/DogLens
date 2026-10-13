@@ -1,0 +1,969 @@
+{
+  "schema_version": 1,
+  "num_classes": 120,
+  "index_rule": "class_id = official Stanford Dogs label - 1; the official labels 1..120 are read from train_list.mat/test_list.mat and each label must map to exactly one source directory",
+  "breed_key_rule": "breed part of the source directory name '<wnid>-<Breed_name>', lower-cased",
+  "mapping_sha256": "d9779c772bfe36c56de40cdcaf7c61e8be334ba2a1407828cb5e2c8b0a9c3c5f",
+  "classes": [
+    {
+      "class_id": 0,
+      "breed_key": "chihuahua",
+      "name_en": "Chihuahua",
+      "wnid": "n02085620",
+      "source_dir": "n02085620-Chihuahua",
+      "source_label": 1
+    },
+    {
+      "class_id": 1,
+      "breed_key": "japanese_spaniel",
+      "name_en": "Japanese spaniel",
+      "wnid": "n02085782",
+      "source_dir": "n02085782-Japanese_spaniel",
+      "source_label": 2
+    },
+    {
+      "class_id": 2,
+      "breed_key": "maltese_dog",
+      "name_en": "Maltese dog",
+      "wnid": "n02085936",
+      "source_dir": "n02085936-Maltese_dog",
+      "source_label": 3
+    },
+    {
+      "class_id": 3,
+      "breed_key": "pekinese",
+      "name_en": "Pekinese",
+      "wnid": "n02086079",
+      "source_dir": "n02086079-Pekinese",
+      "source_label": 4
+    },
+    {
+      "class_id": 4,
+      "breed_key": "shih-tzu",
+      "name_en": "Shih-Tzu",
+      "wnid": "n02086240",
+      "source_dir": "n02086240-Shih-Tzu",
+      "source_label": 5
+    },
+    {
+      "class_id": 5,
+      "breed_key": "blenheim_spaniel",
+      "name_en": "Blenheim spaniel",
+      "wnid": "n02086646",
+      "source_dir": "n02086646-Blenheim_spaniel",
+      "source_label": 6
+    },
+    {
+      "class_id": 6,
+      "breed_key": "papillon",
+      "name_en": "Papillon",
+      "wnid": "n02086910",
+      "source_dir": "n02086910-papillon",
+      "source_label": 7
+    },
+    {
+      "class_id": 7,
+      "breed_key": "toy_terrier",
+      "name_en": "Toy terrier",
+      "wnid": "n02087046",
+      "source_dir": "n02087046-toy_terrier",
+      "source_label": 8
+    },
+    {
+      "class_id": 8,
+      "breed_key": "rhodesian_ridgeback",
+      "name_en": "Rhodesian ridgeback",
+      "wnid": "n02087394",
+      "source_dir": "n02087394-Rhodesian_ridgeback",
+      "source_label": 9
+    },
+    {
+      "class_id": 9,
+      "breed_key": "afghan_hound",
+      "name_en": "Afghan hound",
+      "wnid": "n02088094",
+      "source_dir": "n02088094-Afghan_hound",
+      "source_label": 10
+    },
+    {
+      "class_id": 10,
+      "breed_key": "basset",
+      "name_en": "Basset",
+      "wnid": "n02088238",
+      "source_dir": "n02088238-basset",
+      "source_label": 11
+    },
+    {
+      "class_id": 11,
+      "breed_key": "beagle",
+      "name_en": "Beagle",
+      "wnid": "n02088364",
+      "source_dir": "n02088364-beagle",
+      "source_label": 12
+    },
+    {
+      "class_id": 12,
+      "breed_key": "bloodhound",
+      "name_en": "Bloodhound",
+      "wnid": "n02088466",
+      "source_dir": "n02088466-bloodhound",
+      "source_label": 13
+    },
+    {
+      "class_id": 13,
+      "breed_key": "bluetick",
+      "name_en": "Bluetick",
+      "wnid": "n02088632",
+      "source_dir": "n02088632-bluetick",
+      "source_label": 14
+    },
+    {
+      "class_id": 14,
+      "breed_key": "black-and-tan_coonhound",
+      "name_en": "Black-and-tan coonhound",
+      "wnid": "n02089078",
+      "source_dir": "n02089078-black-and-tan_coonhound",
+      "source_label": 15
+    },
+    {
+      "class_id": 15,
+      "breed_key": "walker_hound",
+      "name_en": "Walker hound",
+      "wnid": "n02089867",
+      "source_dir": "n02089867-Walker_hound",
+      "source_label": 16
+    },
+    {
+      "class_id": 16,
+      "breed_key": "english_foxhound",
+      "name_en": "English foxhound",
+      "wnid": "n02089973",
+      "source_dir": "n02089973-English_foxhound",
+      "source_label": 17
+    },
+    {
+      "class_id": 17,
+      "breed_key": "redbone",
+      "name_en": "Redbone",
+      "wnid": "n02090379",
+      "source_dir": "n02090379-redbone",
+      "source_label": 18
+    },
+    {
+      "class_id": 18,
+      "breed_key": "borzoi",
+      "name_en": "Borzoi",
+      "wnid": "n02090622",
+      "source_dir": "n02090622-borzoi",
+      "source_label": 19
+    },
+    {
+      "class_id": 19,
+      "breed_key": "irish_wolfhound",
+      "name_en": "Irish wolfhound",
+      "wnid": "n02090721",
+      "source_dir": "n02090721-Irish_wolfhound",
+      "source_label": 20
+    },
+    {
+      "class_id": 20,
+      "breed_key": "italian_greyhound",
+      "name_en": "Italian greyhound",
+      "wnid": "n02091032",
+      "source_dir": "n02091032-Italian_greyhound",
+      "source_label": 21
+    },
+    {
+      "class_id": 21,
+      "breed_key": "whippet",
+      "name_en": "Whippet",
+      "wnid": "n02091134",
+      "source_dir": "n02091134-whippet",
+      "source_label": 22
+    },
+    {
+      "class_id": 22,
+      "breed_key": "ibizan_hound",
+      "name_en": "Ibizan hound",
+      "wnid": "n02091244",
+      "source_dir": "n02091244-Ibizan_hound",
+      "source_label": 23
+    },
+    {
+      "class_id": 23,
+      "breed_key": "norwegian_elkhound",
+      "name_en": "Norwegian elkhound",
+      "wnid": "n02091467",
+      "source_dir": "n02091467-Norwegian_elkhound",
+      "source_label": 24
+    },
+    {
+      "class_id": 24,
+      "breed_key": "otterhound",
+      "name_en": "Otterhound",
+      "wnid": "n02091635",
+      "source_dir": "n02091635-otterhound",
+      "source_label": 25
+    },
+    {
+      "class_id": 25,
+      "breed_key": "saluki",
+      "name_en": "Saluki",
+      "wnid": "n02091831",
+      "source_dir": "n02091831-Saluki",
+      "source_label": 26
+    },
+    {
+      "class_id": 26,
+      "breed_key": "scottish_deerhound",
+      "name_en": "Scottish deerhound",
+      "wnid": "n02092002",
+      "source_dir": "n02092002-Scottish_deerhound",
+      "source_label": 27
+    },
+    {
+      "class_id": 27,
+      "breed_key": "weimaraner",
+      "name_en": "Weimaraner",
+      "wnid": "n02092339",
+      "source_dir": "n02092339-Weimaraner",
+      "source_label": 28
+    },
+    {
+      "class_id": 28,
+      "breed_key": "staffordshire_bullterrier",
+      "name_en": "Staffordshire bullterrier",
+      "wnid": "n02093256",
+      "source_dir": "n02093256-Staffordshire_bullterrier",
+      "source_label": 29
+    },
+    {
+      "class_id": 29,
+      "breed_key": "american_staffordshire_terrier",
+      "name_en": "American Staffordshire terrier",
+      "wnid": "n02093428",
+      "source_dir": "n02093428-American_Staffordshire_terrier",
+      "source_label": 30
+    },
+    {
+      "class_id": 30,
+      "breed_key": "bedlington_terrier",
+      "name_en": "Bedlington terrier",
+      "wnid": "n02093647",
+      "source_dir": "n02093647-Bedlington_terrier",
+      "source_label": 31
+    },
+    {
+      "class_id": 31,
+      "breed_key": "border_terrier",
+      "name_en": "Border terrier",
+      "wnid": "n02093754",
+      "source_dir": "n02093754-Border_terrier",
+      "source_label": 32
+    },
+    {
+      "class_id": 32,
+      "breed_key": "kerry_blue_terrier",
+      "name_en": "Kerry blue terrier",
+      "wnid": "n02093859",
+      "source_dir": "n02093859-Kerry_blue_terrier",
+      "source_label": 33
+    },
+    {
+      "class_id": 33,
+      "breed_key": "irish_terrier",
+      "name_en": "Irish terrier",
+      "wnid": "n02093991",
+      "source_dir": "n02093991-Irish_terrier",
+      "source_label": 34
+    },
+    {
+      "class_id": 34,
+      "breed_key": "norfolk_terrier",
+      "name_en": "Norfolk terrier",
+      "wnid": "n02094114",
+      "source_dir": "n02094114-Norfolk_terrier",
+      "source_label": 35
+    },
+    {
+      "class_id": 35,
+      "breed_key": "norwich_terrier",
+      "name_en": "Norwich terrier",
+      "wnid": "n02094258",
+      "source_dir": "n02094258-Norwich_terrier",
+      "source_label": 36
+    },
+    {
+      "class_id": 36,
+      "breed_key": "yorkshire_terrier",
+      "name_en": "Yorkshire terrier",
+      "wnid": "n02094433",
+      "source_dir": "n02094433-Yorkshire_terrier",
+      "source_label": 37
+    },
+    {
+      "class_id": 37,
+      "breed_key": "wire-haired_fox_terrier",
+      "name_en": "Wire-haired fox terrier",
+      "wnid": "n02095314",
+      "source_dir": "n02095314-wire-haired_fox_terrier",
+      "source_label": 38
+    },
+    {
+      "class_id": 38,
+      "breed_key": "lakeland_terrier",
+      "name_en": "Lakeland terrier",
+      "wnid": "n02095570",
+      "source_dir": "n02095570-Lakeland_terrier",
+      "source_label": 39
+    },
+    {
+      "class_id": 39,
+      "breed_key": "sealyham_terrier",
+      "name_en": "Sealyham terrier",
+      "wnid": "n02095889",
+      "source_dir": "n02095889-Sealyham_terrier",
+      "source_label": 40
+    },
+    {
+      "class_id": 40,
+      "breed_key": "airedale",
+      "name_en": "Airedale",
+      "wnid": "n02096051",
+      "source_dir": "n02096051-Airedale",
+      "source_label": 41
+    },
+    {
+      "class_id": 41,
+      "breed_key": "cairn",
+      "name_en": "Cairn",
+      "wnid": "n02096177",
+      "source_dir": "n02096177-cairn",
+      "source_label": 42
+    },
+    {
+      "class_id": 42,
+      "breed_key": "australian_terrier",
+      "name_en": "Australian terrier",
+      "wnid": "n02096294",
+      "source_dir": "n02096294-Australian_terrier",
+      "source_label": 43
+    },
+    {
+      "class_id": 43,
+      "breed_key": "dandie_dinmont",
+      "name_en": "Dandie Dinmont",
+      "wnid": "n02096437",
+      "source_dir": "n02096437-Dandie_Dinmont",
+      "source_label": 44
+    },
+    {
+      "class_id": 44,
+      "breed_key": "boston_bull",
+      "name_en": "Boston bull",
+      "wnid": "n02096585",
+      "source_dir": "n02096585-Boston_bull",
+      "source_label": 45
+    },
+    {
+      "class_id": 45,
+      "breed_key": "miniature_schnauzer",
+      "name_en": "Miniature schnauzer",
+      "wnid": "n02097047",
+      "source_dir": "n02097047-miniature_schnauzer",
+      "source_label": 46
+    },
+    {
+      "class_id": 46,
+      "breed_key": "giant_schnauzer",
+      "name_en": "Giant schnauzer",
+      "wnid": "n02097130",
+      "source_dir": "n02097130-giant_schnauzer",
+      "source_label": 47
+    },
+    {
+      "class_id": 47,
+      "breed_key": "standard_schnauzer",
+      "name_en": "Standard schnauzer",
+      "wnid": "n02097209",
+      "source_dir": "n02097209-standard_schnauzer",
+      "source_label": 48
+    },
+    {
+      "class_id": 48,
+      "breed_key": "scotch_terrier",
+      "name_en": "Scotch terrier",
+      "wnid": "n02097298",
+      "source_dir": "n02097298-Scotch_terrier",
+      "source_label": 49
+    },
+    {
+      "class_id": 49,
+      "breed_key": "tibetan_terrier",
+      "name_en": "Tibetan terrier",
+      "wnid": "n02097474",
+      "source_dir": "n02097474-Tibetan_terrier",
+      "source_label": 50
+    },
+    {
+      "class_id": 50,
+      "breed_key": "silky_terrier",
+      "name_en": "Silky terrier",
+      "wnid": "n02097658",
+      "source_dir": "n02097658-silky_terrier",
+      "source_label": 51
+    },
+    {
+      "class_id": 51,
+      "breed_key": "soft-coated_wheaten_terrier",
+      "name_en": "Soft-coated wheaten terrier",
+      "wnid": "n02098105",
+      "source_dir": "n02098105-soft-coated_wheaten_terrier",
+      "source_label": 52
+    },
+    {
+      "class_id": 52,
+      "breed_key": "west_highland_white_terrier",
+      "name_en": "West Highland white terrier",
+      "wnid": "n02098286",
+      "source_dir": "n02098286-West_Highland_white_terrier",
+      "source_label": 53
+    },
+    {
+      "class_id": 53,
+      "breed_key": "lhasa",
+      "name_en": "Lhasa",
+      "wnid": "n02098413",
+      "source_dir": "n02098413-Lhasa",
+      "source_label": 54
+    },
+    {
+      "class_id": 54,
+      "breed_key": "flat-coated_retriever",
+      "name_en": "Flat-coated retriever",
+      "wnid": "n02099267",
+      "source_dir": "n02099267-flat-coated_retriever",
+      "source_label": 55
+    },
+    {
+      "class_id": 55,
+      "breed_key": "curly-coated_retriever",
+      "name_en": "Curly-coated retriever",
+      "wnid": "n02099429",
+      "source_dir": "n02099429-curly-coated_retriever",
+      "source_label": 56
+    },
+    {
+      "class_id": 56,
+      "breed_key": "golden_retriever",
+      "name_en": "Golden retriever",
+      "wnid": "n02099601",
+      "source_dir": "n02099601-golden_retriever",
+      "source_label": 57
+    },
+    {
+      "class_id": 57,
+      "breed_key": "labrador_retriever",
+      "name_en": "Labrador retriever",
+      "wnid": "n02099712",
+      "source_dir": "n02099712-Labrador_retriever",
+      "source_label": 58
+    },
+    {
+      "class_id": 58,
+      "breed_key": "chesapeake_bay_retriever",
+      "name_en": "Chesapeake Bay retriever",
+      "wnid": "n02099849",
+      "source_dir": "n02099849-Chesapeake_Bay_retriever",
+      "source_label": 59
+    },
+    {
+      "class_id": 59,
+      "breed_key": "german_short-haired_pointer",
+      "name_en": "German short-haired pointer",
+      "wnid": "n02100236",
+      "source_dir": "n02100236-German_short-haired_pointer",
+      "source_label": 60
+    },
+    {
+      "class_id": 60,
+      "breed_key": "vizsla",
+      "name_en": "Vizsla",
+      "wnid": "n02100583",
+      "source_dir": "n02100583-vizsla",
+      "source_label": 61
+    },
+    {
+      "class_id": 61,
+      "breed_key": "english_setter",
+      "name_en": "English setter",
+      "wnid": "n02100735",
+      "source_dir": "n02100735-English_setter",
+      "source_label": 62
+    },
+    {
+      "class_id": 62,
+      "breed_key": "irish_setter",
+      "name_en": "Irish setter",
+      "wnid": "n02100877",
+      "source_dir": "n02100877-Irish_setter",
+      "source_label": 63
+    },
+    {
+      "class_id": 63,
+      "breed_key": "gordon_setter",
+      "name_en": "Gordon setter",
+      "wnid": "n02101006",
+      "source_dir": "n02101006-Gordon_setter",
+      "source_label": 64
+    },
+    {
+      "class_id": 64,
+      "breed_key": "brittany_spaniel",
+      "name_en": "Brittany spaniel",
+      "wnid": "n02101388",
+      "source_dir": "n02101388-Brittany_spaniel",
+      "source_label": 65
+    },
+    {
+      "class_id": 65,
+      "breed_key": "clumber",
+      "name_en": "Clumber",
+      "wnid": "n02101556",
+      "source_dir": "n02101556-clumber",
+      "source_label": 66
+    },
+    {
+      "class_id": 66,
+      "breed_key": "english_springer",
+      "name_en": "English springer",
+      "wnid": "n02102040",
+      "source_dir": "n02102040-English_springer",
+      "source_label": 67
+    },
+    {
+      "class_id": 67,
+      "breed_key": "welsh_springer_spaniel",
+      "name_en": "Welsh springer spaniel",
+      "wnid": "n02102177",
+      "source_dir": "n02102177-Welsh_springer_spaniel",
+      "source_label": 68
+    },
+    {
+      "class_id": 68,
+      "breed_key": "cocker_spaniel",
+      "name_en": "Cocker spaniel",
+      "wnid": "n02102318",
+      "source_dir": "n02102318-cocker_spaniel",
+      "source_label": 69
+    },
+    {
+      "class_id": 69,
+      "breed_key": "sussex_spaniel",
+      "name_en": "Sussex spaniel",
+      "wnid": "n02102480",
+      "source_dir": "n02102480-Sussex_spaniel",
+      "source_label": 70
+    },
+    {
+      "class_id": 70,
+      "breed_key": "irish_water_spaniel",
+      "name_en": "Irish water spaniel",
+      "wnid": "n02102973",
+      "source_dir": "n02102973-Irish_water_spaniel",
+      "source_label": 71
+    },
+    {
+      "class_id": 71,
+      "breed_key": "kuvasz",
+      "name_en": "Kuvasz",
+      "wnid": "n02104029",
+      "source_dir": "n02104029-kuvasz",
+      "source_label": 72
+    },
+    {
+      "class_id": 72,
+      "breed_key": "schipperke",
+      "name_en": "Schipperke",
+      "wnid": "n02104365",
+      "source_dir": "n02104365-schipperke",
+      "source_label": 73
+    },
+    {
+      "class_id": 73,
+      "breed_key": "groenendael",
+      "name_en": "Groenendael",
+      "wnid": "n02105056",
+      "source_dir": "n02105056-groenendael",
+      "source_label": 74
+    },
+    {
+      "class_id": 74,
+      "breed_key": "malinois",
+      "name_en": "Malinois",
+      "wnid": "n02105162",
+      "source_dir": "n02105162-malinois",
+      "source_label": 75
+    },
+    {
+      "class_id": 75,
+      "breed_key": "briard",
+      "name_en": "Briard",
+      "wnid": "n02105251",
+      "source_dir": "n02105251-briard",
+      "source_label": 76
+    },
+    {
+      "class_id": 76,
+      "breed_key": "kelpie",
+      "name_en": "Kelpie",
+      "wnid": "n02105412",
+      "source_dir": "n02105412-kelpie",
+      "source_label": 77
+    },
+    {
+      "class_id": 77,
+      "breed_key": "komondor",
+      "name_en": "Komondor",
+      "wnid": "n02105505",
+      "source_dir": "n02105505-komondor",
+      "source_label": 78
+    },
+    {
+      "class_id": 78,
+      "breed_key": "old_english_sheepdog",
+      "name_en": "Old English sheepdog",
+      "wnid": "n02105641",
+      "source_dir": "n02105641-Old_English_sheepdog",
+      "source_label": 79
+    },
+    {
+      "class_id": 79,
+      "breed_key": "shetland_sheepdog",
+      "name_en": "Shetland sheepdog",
+      "wnid": "n02105855",
+      "source_dir": "n02105855-Shetland_sheepdog",
+      "source_label": 80
+    },
+    {
+      "class_id": 80,
+      "breed_key": "collie",
+      "name_en": "Collie",
+      "wnid": "n02106030",
+      "source_dir": "n02106030-collie",
+      "source_label": 81
+    },
+    {
+      "class_id": 81,
+      "breed_key": "border_collie",
+      "name_en": "Border collie",
+      "wnid": "n02106166",
+      "source_dir": "n02106166-Border_collie",
+      "source_label": 82
+    },
+    {
+      "class_id": 82,
+      "breed_key": "bouvier_des_flandres",
+      "name_en": "Bouvier des Flandres",
+      "wnid": "n02106382",
+      "source_dir": "n02106382-Bouvier_des_Flandres",
+      "source_label": 83
+    },
+    {
+      "class_id": 83,
+      "breed_key": "rottweiler",
+      "name_en": "Rottweiler",
+      "wnid": "n02106550",
+      "source_dir": "n02106550-Rottweiler",
+      "source_label": 84
+    },
+    {
+      "class_id": 84,
+      "breed_key": "german_shepherd",
+      "name_en": "German shepherd",
+      "wnid": "n02106662",
+      "source_dir": "n02106662-German_shepherd",
+      "source_label": 85
+    },
+    {
+      "class_id": 85,
+      "breed_key": "doberman",
+      "name_en": "Doberman",
+      "wnid": "n02107142",
+      "source_dir": "n02107142-Doberman",
+      "source_label": 86
+    },
+    {
+      "class_id": 86,
+      "breed_key": "miniature_pinscher",
+      "name_en": "Miniature pinscher",
+      "wnid": "n02107312",
+      "source_dir": "n02107312-miniature_pinscher",
+      "source_label": 87
+    },
+    {
+      "class_id": 87,
+      "breed_key": "greater_swiss_mountain_dog",
+      "name_en": "Greater Swiss Mountain dog",
+      "wnid": "n02107574",
+      "source_dir": "n02107574-Greater_Swiss_Mountain_dog",
+      "source_label": 88
+    },
+    {
+      "class_id": 88,
+      "breed_key": "bernese_mountain_dog",
+      "name_en": "Bernese mountain dog",
+      "wnid": "n02107683",
+      "source_dir": "n02107683-Bernese_mountain_dog",
+      "source_label": 89
+    },
+    {
+      "class_id": 89,
+      "breed_key": "appenzeller",
+      "name_en": "Appenzeller",
+      "wnid": "n02107908",
+      "source_dir": "n02107908-Appenzeller",
+      "source_label": 90
+    },
+    {
+      "class_id": 90,
+      "breed_key": "entlebucher",
+      "name_en": "EntleBucher",
+      "wnid": "n02108000",
+      "source_dir": "n02108000-EntleBucher",
+      "source_label": 91
+    },
+    {
+      "class_id": 91,
+      "breed_key": "boxer",
+      "name_en": "Boxer",
+      "wnid": "n02108089",
+      "source_dir": "n02108089-boxer",
+      "source_label": 92
+    },
+    {
+      "class_id": 92,
+      "breed_key": "bull_mastiff",
+      "name_en": "Bull mastiff",
+      "wnid": "n02108422",
+      "source_dir": "n02108422-bull_mastiff",
+      "source_label": 93
+    },
+    {
+      "class_id": 93,
+      "breed_key": "tibetan_mastiff",
+      "name_en": "Tibetan mastiff",
+      "wnid": "n02108551",
+      "source_dir": "n02108551-Tibetan_mastiff",
+      "source_label": 94
+    },
+    {
+      "class_id": 94,
+      "breed_key": "french_bulldog",
+      "name_en": "French bulldog",
+      "wnid": "n02108915",
+      "source_dir": "n02108915-French_bulldog",
+      "source_label": 95
+    },
+    {
+      "class_id": 95,
+      "breed_key": "great_dane",
+      "name_en": "Great Dane",
+      "wnid": "n02109047",
+      "source_dir": "n02109047-Great_Dane",
+      "source_label": 96
+    },
+    {
+      "class_id": 96,
+      "breed_key": "saint_bernard",
+      "name_en": "Saint Bernard",
+      "wnid": "n02109525",
+      "source_dir": "n02109525-Saint_Bernard",
+      "source_label": 97
+    },
+    {
+      "class_id": 97,
+      "breed_key": "eskimo_dog",
+      "name_en": "Eskimo dog",
+      "wnid": "n02109961",
+      "source_dir": "n02109961-Eskimo_dog",
+      "source_label": 98
+    },
+    {
+      "class_id": 98,
+      "breed_key": "malamute",
+      "name_en": "Malamute",
+      "wnid": "n02110063",
+      "source_dir": "n02110063-malamute",
+      "source_label": 99
+    },
+    {
+      "class_id": 99,
+      "breed_key": "siberian_husky",
+      "name_en": "Siberian husky",
+      "wnid": "n02110185",
+      "source_dir": "n02110185-Siberian_husky",
+      "source_label": 100
+    },
+    {
+      "class_id": 100,
+      "breed_key": "affenpinscher",
+      "name_en": "Affenpinscher",
+      "wnid": "n02110627",
+      "source_dir": "n02110627-affenpinscher",
+      "source_label": 101
+    },
+    {
+      "class_id": 101,
+      "breed_key": "basenji",
+      "name_en": "Basenji",
+      "wnid": "n02110806",
+      "source_dir": "n02110806-basenji",
+      "source_label": 102
+    },
+    {
+      "class_id": 102,
+      "breed_key": "pug",
+      "name_en": "Pug",
+      "wnid": "n02110958",
+      "source_dir": "n02110958-pug",
+      "source_label": 103
+    },
+    {
+      "class_id": 103,
+      "breed_key": "leonberg",
+      "name_en": "Leonberg",
+      "wnid": "n02111129",
+      "source_dir": "n02111129-Leonberg",
+      "source_label": 104
+    },
+    {
+      "class_id": 104,
+      "breed_key": "newfoundland",
+      "name_en": "Newfoundland",
+      "wnid": "n02111277",
+      "source_dir": "n02111277-Newfoundland",
+      "source_label": 105
+    },
+    {
+      "class_id": 105,
+      "breed_key": "great_pyrenees",
+      "name_en": "Great Pyrenees",
+      "wnid": "n02111500",
+      "source_dir": "n02111500-Great_Pyrenees",
+      "source_label": 106
+    },
+    {
+      "class_id": 106,
+      "breed_key": "samoyed",
+      "name_en": "Samoyed",
+      "wnid": "n02111889",
+      "source_dir": "n02111889-Samoyed",
+      "source_label": 107
+    },
+    {
+      "class_id": 107,
+      "breed_key": "pomeranian",
+      "name_en": "Pomeranian",
+      "wnid": "n02112018",
+      "source_dir": "n02112018-Pomeranian",
+      "source_label": 108
+    },
+    {
+      "class_id": 108,
+      "breed_key": "chow",
+      "name_en": "Chow",
+      "wnid": "n02112137",
+      "source_dir": "n02112137-chow",
+      "source_label": 109
+    },
+    {
+      "class_id": 109,
+      "breed_key": "keeshond",
+      "name_en": "Keeshond",
+      "wnid": "n02112350",
+      "source_dir": "n02112350-keeshond",
+      "source_label": 110
+    },
+    {
+      "class_id": 110,
+      "breed_key": "brabancon_griffon",
+      "name_en": "Brabancon griffon",
+      "wnid": "n02112706",
+      "source_dir": "n02112706-Brabancon_griffon",
+      "source_label": 111
+    },
+    {
+      "class_id": 111,
+      "breed_key": "pembroke",
+      "name_en": "Pembroke",
+      "wnid": "n02113023",
+      "source_dir": "n02113023-Pembroke",
+      "source_label": 112
+    },
+    {
+      "class_id": 112,
+      "breed_key": "cardigan",
+      "name_en": "Cardigan",
+      "wnid": "n02113186",
+      "source_dir": "n02113186-Cardigan",
+      "source_label": 113
+    },
+    {
+      "class_id": 113,
+      "breed_key": "toy_poodle",
+      "name_en": "Toy poodle",
+      "wnid": "n02113624",
+      "source_dir": "n02113624-toy_poodle",
+      "source_label": 114
+    },
+    {
+      "class_id": 114,
+      "breed_key": "miniature_poodle",
+      "name_en": "Miniature poodle",
+      "wnid": "n02113712",
+      "source_dir": "n02113712-miniature_poodle",
+      "source_label": 115
+    },
+    {
+      "class_id": 115,
+      "breed_key": "standard_poodle",
+      "name_en": "Standard poodle",
+      "wnid": "n02113799",
+      "source_dir": "n02113799-standard_poodle",
+      "source_label": 116
+    },
+    {
+      "class_id": 116,
+      "breed_key": "mexican_hairless",
+      "name_en": "Mexican hairless",
+      "wnid": "n02113978",
+      "source_dir": "n02113978-Mexican_hairless",
+      "source_label": 117
+    },
+    {
+      "class_id": 117,
+      "breed_key": "dingo",
+      "name_en": "Dingo",
+      "wnid": "n02115641",
+      "source_dir": "n02115641-dingo",
+      "source_label": 118
+    },
+    {
+      "class_id": 118,
+      "breed_key": "dhole",
+      "name_en": "Dhole",
+      "wnid": "n02115913",
+      "source_dir": "n02115913-dhole",
+      "source_label": 119
+    },
+    {
+      "class_id": 119,
+      "breed_key": "african_hunting_dog",
+      "name_en": "African hunting dog",
+      "wnid": "n02116738",
+      "source_dir": "n02116738-African_hunting_dog",
+      "source_label": 120
+    }
+  ]
+}

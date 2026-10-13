@@ -1,0 +1,3676 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-10-13T17:20:45Z",
+  "command": "scripts/prepare_dataset.py ",
+  "inputs": {
+    "images_dir": "data/images/Images",
+    "annotations_dir": "data/annotations/Annotation",
+    "splits_dir": "data/splits",
+    "config": "configs/training.yaml",
+    "relative_path_root": "data/images/Images",
+    "split_files_sha256": {
+      "train_list.mat": "b5e2f123a93cf05cbe4f45519b5947d217825aea7321b10a80fe8ac677b6560e",
+      "test_list.mat": "eee204bd000b681b4adc4cb31e957ab4143d87e4b6ef849f12bb46a268ae6c4b",
+      "file_list.mat": "34ac444f8b4dd7b03228255b2ee4d8ce4c45e6bed75339d29543f4f6a6ebdd84"
+    },
+    "source": {
+      "dataset": "Stanford Dogs Dataset (Khosla, Jayadevaprakash, Yao, Fei-Fei; FGVC Workshop, CVPR 2011)",
+      "official_page": "http://vision.stanford.edu/aditya86/ImageNetDogs/main.html",
+      "archive_url": "http://vision.stanford.edu/aditya86/ImageNetDogs/lists.tar",
+      "retrieved_at_utc": "2026-10-13T16:19:55Z",
+      "archive_file": "data/lists.tar",
+      "archive_bytes": 481280,
+      "archive_sha256": "34b47cacd9a98b5d150e084f24d29391c084c55272295ec65c85651bc35f4d6c",
+      "server_last_modified": "Tue, 17 Jan 2012 22:53:00 GMT",
+      "independent_checksum_match": "sha256 and size equal to tensorflow_datasets/datasets/stanford_dogs/checksums.tsv (GitHub, master)",
+      "retrieval_note": "Local DNS returned NXDOMAIN for vision.stanford.edu; the host was resolved via DNS-over-HTTPS (Cloudflare and Google both: CNAME ai.stanford.edu -> 171.64.68.10) and fetched over plain HTTP, the scheme used by the official page link (HTTPS on that IP presents a certificate for another name). Authenticity is supported by the independent TFDS checksum match.",
+      "extracted_members": [
+        "file_list.mat",
+        "train_list.mat",
+        "test_list.mat"
+      ],
+      "extraction_checks": "regular files only, no absolute paths, no '..', single path component, tarfile filter='data'",
+      "images_and_annotations": "pre-existing local copies in data/images/Images and data/annotations/Annotation; not re-downloaded, not modified",
+      "terms": "Images originate from ImageNet; use is limited to non-commercial research/educational purposes per ImageNet terms. Images are not redistributed by this repository."
+    }
+  },
+  "parameters": {
+    "seed": 42,
+    "val_fraction": 0.2,
+    "bbox_context": 0.1
+  },
+  "outputs": {
+    "manifest": "data/prepared/manifest.csv",
+    "manifest_sha256": "396b1f630f414f18aee16c8839e815dcb66c0e4563010cac61051d8fbdb843ed",
+    "class_mapping": "data/prepared/class_mapping.json",
+    "mapping_sha256": "d9779c772bfe36c56de40cdcaf7c61e8be334ba2a1407828cb5e2c8b0a9c3c5f",
+    "excluded": "data/prepared/excluded.csv",
+    "excluded_sha256": "16a0abc92f6c9dba9f1dd78f8bab8f83ec29082729322b166668a813b0f574f9",
+    "catalog": "assets/breeds.json",
+    "names_ru_verified": 0,
+    "write_state": {
+      "manifest": "unchanged",
+      "class_mapping": "unchanged"
+    }
+  },
+  "package_versions": {
+    "python": "3.11.15",
+    "numpy": "2.4.6",
+    "pillow": "12.3.0",
+    "scipy": "1.17.1",
+    "scikit-learn": "1.9.1"
+  },
+  "official_split": {
+    "train_entries": 12000,
+    "test_entries": 8580,
+    "checks": {
+      "train_test_id_overlap": 0,
+      "file_list_matches_train_plus_test": true,
+      "content_overlap_between_splits": 0
+    }
+  },
+  "disk": {
+    "image_class_dirs": 120,
+    "annotation_class_dirs": 120,
+    "image_files": 20580,
+    "annotation_files": 20580
+  },
+  "num_classes": 120,
+  "split_counts": {
+    "train": 9551,
+    "val": 2382,
+    "test": 8580
+  },
+  "total_records": 20513,
+  "class_counts": {
+    "chihuahua": {
+      "train": 80,
+      "val": 20,
+      "test": 52
+    },
+    "japanese_spaniel": {
+      "train": 78,
+      "val": 20,
+      "test": 85
+    },
+    "maltese_dog": {
+      "train": 80,
+      "val": 20,
+      "test": 152
+    },
+    "pekinese": {
+      "train": 80,
+      "val": 20,
+      "test": 49
+    },
+    "shih-tzu": {
+      "train": 80,
+      "val": 20,
+      "test": 114
+    },
+    "blenheim_spaniel": {
+      "train": 79,
+      "val": 20,
+      "test": 88
+    },
+    "papillon": {
+      "train": 80,
+      "val": 20,
+      "test": 96
+    },
+    "toy_terrier": {
+      "train": 80,
+      "val": 20,
+      "test": 72
+    },
+    "rhodesian_ridgeback": {
+      "train": 80,
+      "val": 20,
+      "test": 72
+    },
+    "afghan_hound": {
+      "train": 80,
+      "val": 20,
+      "test": 139
+    },
+    "basset": {
+      "train": 80,
+      "val": 20,
+      "test": 75
+    },
+    "beagle": {
+      "train": 80,
+      "val": 20,
+      "test": 95
+    },
+    "bloodhound": {
+      "train": 80,
+      "val": 19,
+      "test": 87
+    },
+    "bluetick": {
+      "train": 80,
+      "val": 19,
+      "test": 71
+    },
+    "black-and-tan_coonhound": {
+      "train": 80,
+      "val": 20,
+      "test": 59
+    },
+    "walker_hound": {
+      "train": 80,
+      "val": 20,
+      "test": 53
+    },
+    "english_foxhound": {
+      "train": 80,
+      "val": 20,
+      "test": 57
+    },
+    "redbone": {
+      "train": 79,
+      "val": 19,
+      "test": 48
+    },
+    "borzoi": {
+      "train": 80,
+      "val": 20,
+      "test": 51
+    },
+    "irish_wolfhound": {
+      "train": 80,
+      "val": 20,
+      "test": 118
+    },
+    "italian_greyhound": {
+      "train": 80,
+      "val": 20,
+      "test": 82
+    },
+    "whippet": {
+      "train": 80,
+      "val": 20,
+      "test": 87
+    },
+    "ibizan_hound": {
+      "train": 80,
+      "val": 20,
+      "test": 88
+    },
+    "norwegian_elkhound": {
+      "train": 80,
+      "val": 20,
+      "test": 96
+    },
+    "otterhound": {
+      "train": 80,
+      "val": 20,
+      "test": 51
+    },
+    "saluki": {
+      "train": 79,
+      "val": 20,
+      "test": 100
+    },
+    "scottish_deerhound": {
+      "train": 79,
+      "val": 20,
+      "test": 132
+    },
+    "weimaraner": {
+      "train": 80,
+      "val": 20,
+      "test": 60
+    },
+    "staffordshire_bullterrier": {
+      "train": 78,
+      "val": 20,
+      "test": 55
+    },
+    "american_staffordshire_terrier": {
+      "train": 79,
+      "val": 20,
+      "test": 64
+    },
+    "bedlington_terrier": {
+      "train": 78,
+      "val": 19,
+      "test": 82
+    },
+    "border_terrier": {
+      "train": 80,
+      "val": 20,
+      "test": 72
+    },
+    "kerry_blue_terrier": {
+      "train": 80,
+      "val": 20,
+      "test": 79
+    },
+    "irish_terrier": {
+      "train": 79,
+      "val": 20,
+      "test": 69
+    },
+    "norfolk_terrier": {
+      "train": 79,
+      "val": 20,
+      "test": 72
+    },
+    "norwich_terrier": {
+      "train": 79,
+      "val": 19,
+      "test": 85
+    },
+    "yorkshire_terrier": {
+      "train": 80,
+      "val": 20,
+      "test": 64
+    },
+    "wire-haired_fox_terrier": {
+      "train": 78,
+      "val": 19,
+      "test": 57
+    },
+    "lakeland_terrier": {
+      "train": 78,
+      "val": 19,
+      "test": 97
+    },
+    "sealyham_terrier": {
+      "train": 79,
+      "val": 20,
+      "test": 102
+    },
+    "airedale": {
+      "train": 80,
+      "val": 20,
+      "test": 102
+    },
+    "cairn": {
+      "train": 80,
+      "val": 20,
+      "test": 97
+    },
+    "australian_terrier": {
+      "train": 80,
+      "val": 20,
+      "test": 96
+    },
+    "dandie_dinmont": {
+      "train": 80,
+      "val": 20,
+      "test": 80
+    },
+    "boston_bull": {
+      "train": 80,
+      "val": 20,
+      "test": 82
+    },
+    "miniature_schnauzer": {
+      "train": 80,
+      "val": 19,
+      "test": 54
+    },
+    "giant_schnauzer": {
+      "train": 80,
+      "val": 20,
+      "test": 57
+    },
+    "standard_schnauzer": {
+      "train": 79,
+      "val": 20,
+      "test": 55
+    },
+    "scotch_terrier": {
+      "train": 80,
+      "val": 20,
+      "test": 58
+    },
+    "tibetan_terrier": {
+      "train": 79,
+      "val": 20,
+      "test": 106
+    },
+    "silky_terrier": {
+      "train": 80,
+      "val": 20,
+      "test": 83
+    },
+    "soft-coated_wheaten_terrier": {
+      "train": 80,
+      "val": 19,
+      "test": 56
+    },
+    "west_highland_white_terrier": {
+      "train": 80,
+      "val": 20,
+      "test": 69
+    },
+    "lhasa": {
+      "train": 80,
+      "val": 20,
+      "test": 86
+    },
+    "flat-coated_retriever": {
+      "train": 80,
+      "val": 20,
+      "test": 52
+    },
+    "curly-coated_retriever": {
+      "train": 80,
+      "val": 20,
+      "test": 51
+    },
+    "golden_retriever": {
+      "train": 80,
+      "val": 20,
+      "test": 50
+    },
+    "labrador_retriever": {
+      "train": 80,
+      "val": 20,
+      "test": 71
+    },
+    "chesapeake_bay_retriever": {
+      "train": 80,
+      "val": 20,
+      "test": 67
+    },
+    "german_short-haired_pointer": {
+      "train": 80,
+      "val": 20,
+      "test": 52
+    },
+    "vizsla": {
+      "train": 80,
+      "val": 20,
+      "test": 54
+    },
+    "english_setter": {
+      "train": 80,
+      "val": 20,
+      "test": 61
+    },
+    "irish_setter": {
+      "train": 80,
+      "val": 20,
+      "test": 55
+    },
+    "gordon_setter": {
+      "train": 80,
+      "val": 20,
+      "test": 53
+    },
+    "brittany_spaniel": {
+      "train": 80,
+      "val": 20,
+      "test": 52
+    },
+    "clumber": {
+      "train": 79,
+      "val": 20,
+      "test": 50
+    },
+    "english_springer": {
+      "train": 80,
+      "val": 20,
+      "test": 59
+    },
+    "welsh_springer_spaniel": {
+      "train": 80,
+      "val": 20,
+      "test": 50
+    },
+    "cocker_spaniel": {
+      "train": 80,
+      "val": 20,
+      "test": 59
+    },
+    "sussex_spaniel": {
+      "train": 80,
+      "val": 20,
+      "test": 51
+    },
+    "irish_water_spaniel": {
+      "train": 79,
+      "val": 20,
+      "test": 50
+    },
+    "kuvasz": {
+      "train": 80,
+      "val": 20,
+      "test": 50
+    },
+    "schipperke": {
+      "train": 79,
+      "val": 20,
+      "test": 54
+    },
+    "groenendael": {
+      "train": 78,
+      "val": 20,
+      "test": 50
+    },
+    "malinois": {
+      "train": 80,
+      "val": 20,
+      "test": 50
+    },
+    "briard": {
+      "train": 79,
+      "val": 20,
+      "test": 52
+    },
+    "kelpie": {
+      "train": 80,
+      "val": 20,
+      "test": 53
+    },
+    "komondor": {
+      "train": 80,
+      "val": 20,
+      "test": 54
+    },
+    "old_english_sheepdog": {
+      "train": 80,
+      "val": 20,
+      "test": 69
+    },
+    "shetland_sheepdog": {
+      "train": 80,
+      "val": 20,
+      "test": 57
+    },
+    "collie": {
+      "train": 77,
+      "val": 19,
+      "test": 53
+    },
+    "border_collie": {
+      "train": 77,
+      "val": 19,
+      "test": 50
+    },
+    "bouvier_des_flandres": {
+      "train": 80,
+      "val": 20,
+      "test": 50
+    },
+    "rottweiler": {
+      "train": 80,
+      "val": 20,
+      "test": 52
+    },
+    "german_shepherd": {
+      "train": 80,
+      "val": 20,
+      "test": 52
+    },
+    "doberman": {
+      "train": 80,
+      "val": 20,
+      "test": 50
+    },
+    "miniature_pinscher": {
+      "train": 80,
+      "val": 20,
+      "test": 84
+    },
+    "greater_swiss_mountain_dog": {
+      "train": 80,
+      "val": 20,
+      "test": 68
+    },
+    "bernese_mountain_dog": {
+      "train": 79,
+      "val": 20,
+      "test": 118
+    },
+    "appenzeller": {
+      "train": 78,
+      "val": 20,
+      "test": 51
+    },
+    "entlebucher": {
+      "train": 80,
+      "val": 19,
+      "test": 102
+    },
+    "boxer": {
+      "train": 80,
+      "val": 20,
+      "test": 51
+    },
+    "bull_mastiff": {
+      "train": 80,
+      "val": 20,
+      "test": 56
+    },
+    "tibetan_mastiff": {
+      "train": 80,
+      "val": 20,
+      "test": 52
+    },
+    "french_bulldog": {
+      "train": 80,
+      "val": 20,
+      "test": 59
+    },
+    "great_dane": {
+      "train": 80,
+      "val": 20,
+      "test": 56
+    },
+    "saint_bernard": {
+      "train": 80,
+      "val": 19,
+      "test": 70
+    },
+    "eskimo_dog": {
+      "train": 79,
+      "val": 20,
+      "test": 50
+    },
+    "malamute": {
+      "train": 80,
+      "val": 20,
+      "test": 78
+    },
+    "siberian_husky": {
+      "train": 79,
+      "val": 20,
+      "test": 92
+    },
+    "affenpinscher": {
+      "train": 80,
+      "val": 20,
+      "test": 50
+    },
+    "basenji": {
+      "train": 80,
+      "val": 20,
+      "test": 109
+    },
+    "pug": {
+      "train": 80,
+      "val": 20,
+      "test": 100
+    },
+    "leonberg": {
+      "train": 80,
+      "val": 20,
+      "test": 110
+    },
+    "newfoundland": {
+      "train": 80,
+      "val": 20,
+      "test": 95
+    },
+    "great_pyrenees": {
+      "train": 80,
+      "val": 20,
+      "test": 113
+    },
+    "samoyed": {
+      "train": 80,
+      "val": 20,
+      "test": 118
+    },
+    "pomeranian": {
+      "train": 80,
+      "val": 20,
+      "test": 119
+    },
+    "chow": {
+      "train": 80,
+      "val": 20,
+      "test": 96
+    },
+    "keeshond": {
+      "train": 80,
+      "val": 20,
+      "test": 58
+    },
+    "brabancon_griffon": {
+      "train": 76,
+      "val": 19,
+      "test": 53
+    },
+    "pembroke": {
+      "train": 80,
+      "val": 20,
+      "test": 81
+    },
+    "cardigan": {
+      "train": 79,
+      "val": 20,
+      "test": 55
+    },
+    "toy_poodle": {
+      "train": 78,
+      "val": 19,
+      "test": 51
+    },
+    "miniature_poodle": {
+      "train": 78,
+      "val": 19,
+      "test": 55
+    },
+    "standard_poodle": {
+      "train": 79,
+      "val": 20,
+      "test": 59
+    },
+    "mexican_hairless": {
+      "train": 80,
+      "val": 19,
+      "test": 55
+    },
+    "dingo": {
+      "train": 80,
+      "val": 20,
+      "test": 56
+    },
+    "dhole": {
+      "train": 79,
+      "val": 19,
+      "test": 50
+    },
+    "african_hunting_dog": {
+      "train": 80,
+      "val": 20,
+      "test": 69
+    }
+  },
+  "class_count_range": {
+    "train": [
+      76,
+      80
+    ],
+    "val": [
+      19,
+      20
+    ],
+    "test": [
+      48,
+      152
+    ]
+  },
+  "excluded": [
+    {
+      "image_id": "n02085782_186",
+      "split": "train",
+      "reason": "dup_with_test+label_conflict",
+      "relative_path": "n02085782-Japanese_spaniel/n02085782_186.jpg",
+      "class_id": 1,
+      "breed_key": "japanese_spaniel",
+      "sha256": "011a26e44d3eb347f6526bcca40774cfe9ef086f023f7095138203c6d0425bdc",
+      "duplicate_of": [
+        "n02086646_172"
+      ]
+    },
+    {
+      "image_id": "n02085782_313",
+      "split": "train",
+      "reason": "dup_with_test+label_conflict",
+      "relative_path": "n02085782-Japanese_spaniel/n02085782_313.jpg",
+      "class_id": 1,
+      "breed_key": "japanese_spaniel",
+      "sha256": "066f456810f20c79c49f4e13bcf16f5a4c9082da9a8a1ea5673ce66a9079472b",
+      "duplicate_of": [
+        "n02086646_280"
+      ]
+    },
+    {
+      "image_id": "n02086646_1445",
+      "split": "train",
+      "reason": "dup_with_test",
+      "relative_path": "n02086646-Blenheim_spaniel/n02086646_1445.jpg",
+      "class_id": 5,
+      "breed_key": "blenheim_spaniel",
+      "sha256": "0a3b98fc9c6775beae8d2e681c9f302dc82a210c4b7ece0f6b181976435f66ed",
+      "duplicate_of": [
+        "n02086646_422"
+      ]
+    },
+    {
+      "image_id": "n02088466_7462",
+      "split": "val",
+      "reason": "label_conflict",
+      "relative_path": "n02088466-bloodhound/n02088466_7462.jpg",
+      "class_id": 12,
+      "breed_key": "bloodhound",
+      "sha256": "235e5f9512f1f316632f269298513e41a973dac4079f128a16936841bfac96ef",
+      "duplicate_of": [
+        "n02090379_3300"
+      ]
+    },
+    {
+      "image_id": "n02088632_982",
+      "split": "val",
+      "reason": "dup_with_test",
+      "relative_path": "n02088632-bluetick/n02088632_982.jpg",
+      "class_id": 13,
+      "breed_key": "bluetick",
+      "sha256": "a68ced39a803159417bc2cda3c15a304738ebda101fd08b7e6ee6edfcfce9b37",
+      "duplicate_of": [
+        "n02088632_819"
+      ]
+    },
+    {
+      "image_id": "n02090379_3300",
+      "split": "val",
+      "reason": "label_conflict",
+      "relative_path": "n02090379-redbone/n02090379_3300.jpg",
+      "class_id": 17,
+      "breed_key": "redbone",
+      "sha256": "235e5f9512f1f316632f269298513e41a973dac4079f128a16936841bfac96ef",
+      "duplicate_of": [
+        "n02088466_7462"
+      ]
+    },
+    {
+      "image_id": "n02090379_855",
+      "split": "val",
+      "reason": "dup_with_test",
+      "relative_path": "n02090379-redbone/n02090379_855.jpg",
+      "class_id": 17,
+      "breed_key": "redbone",
+      "sha256": "3dd73147579c69d99aad7333eb1e504d65f21cee48143b7b31c340c11b8d29af",
+      "duplicate_of": [
+        "n02090379_4667"
+      ]
+    },
+    {
+      "image_id": "n02091831_13767",
+      "split": "train",
+      "reason": "dup_with_test",
+      "relative_path": "n02091831-Saluki/n02091831_13767.jpg",
+      "class_id": 25,
+      "breed_key": "saluki",
+      "sha256": "4a9b495f13c500f9deea3efb911c86ce1cfeb9a8fc8c14e949400c60d581c27d",
+      "duplicate_of": [
+        "n02091831_6323"
+      ]
+    },
+    {
+      "image_id": "n02092002_4745",
+      "split": "train",
+      "reason": "dup_with_test",
+      "relative_path": "n02092002-Scottish_deerhound/n02092002_4745.jpg",
+      "class_id": 26,
+      "breed_key": "scottish_deerhound",
+      "sha256": "7cadd9f1a254d1fc8866a9f1676b32612b0604b3aa56f988a1eaa1bdfecd5c06",
+      "duplicate_of": [
+        "n02092002_1767"
+      ]
+    },
+    {
+      "image_id": "n02093256_4090",
+      "split": "train",
+      "reason": "label_conflict",
+      "relative_path": "n02093256-Staffordshire_bullterrier/n02093256_4090.jpg",
+      "class_id": 28,
+      "breed_key": "staffordshire_bullterrier",
+      "sha256": "a9abeea1d94ba152f7557451d1684880d04ee42bc0949f8218d73220c7f88f2b",
+      "duplicate_of": [
+        "n02093428_5635"
+      ]
+    },
+    {
+      "image_id": "n02093256_5988",
+      "split": "train",
+      "reason": "dup_with_test+label_conflict",
+      "relative_path": "n02093256-Staffordshire_bullterrier/n02093256_5988.jpg",
+      "class_id": 28,
+      "breed_key": "staffordshire_bullterrier",
+      "sha256": "bf32fb3158de077ada30e0873ff2aa783168b1741fe059c20c1f76c6f1131e4e",
+      "duplicate_of": [
+        "n02093428_1378"
+      ]
+    },
+    {
+      "image_id": "n02093428_5635",
+      "split": "train",
+      "reason": "label_conflict",
+      "relative_path": "n02093428-American_Staffordshire_terrier/n02093428_5635.jpg",
+      "class_id": 29,
+      "breed_key": "american_staffordshire_terrier",
+      "sha256": "a9abeea1d94ba152f7557451d1684880d04ee42bc0949f8218d73220c7f88f2b",
+      "duplicate_of": [
+        "n02093256_4090"
+      ]
+    },
+    {
+      "image_id": "n02093647_1766",
+      "split": "train",
+      "reason": "dup_with_test",
+      "relative_path": "n02093647-Bedlington_terrier/n02093647_1766.jpg",
+      "class_id": 30,
+      "breed_key": "bedlington_terrier",
+      "sha256": "7663a183c9d0add0a6d9e401cb4e3c1f222851b3cdfde07a44547c65d4ed69d1",
+      "duplicate_of": [
+        "n02093647_3277"
+      ]
+    },
+    {
+      "image_id": "n02093647_2626",
+      "split": "val",
+      "reason": "dup_with_test",
+      "relative_path": "n02093647-Bedlington_terrier/n02093647_2626.jpg",
+      "class_id": 30,
+      "breed_key": "bedlington_terrier",
+      "sha256": "8e68ed0282527c0f336e8e0b7611832174fe52bea384f4e056041d40f381fd7e",
+      "duplicate_of": [
+        "n02093647_2687"
+      ]
+    },
+    {
+      "image_id": "n02093647_518",
+      "split": "train",
+      "reason": "dup_with_test",
+      "relative_path": "n02093647-Bedlington_terrier/n02093647_518.jpg",
+      "class_id": 30,
+      "breed_key": "bedlington_terrier",
+      "sha256": "337a5eb722f8e61e3bcccc0fb3640138e4cdcc493b24316dfa3d6d06990689a8",
+      "duplicate_of": [
+        "n02093647_2585"
+      ]
+    },
+    {
+      "image_id": "n02093991_114",
+      "split": "train",
+      "reason": "label_conflict",
+      "relative_path": "n02093991-Irish_terrier/n02093991_114.jpg",
+      "class_id": 33,
+      "breed_key": "irish_terrier",
+      "sha256": "3ef8192520db6f45093fda7d5baebf065e706e64cc88ea52ca2a329013a18992",
+      "duplicate_of": [
+        "n02095314_80"
+      ]
+    },
+    {
+      "image_id": "n02094114_1696",
+      "split": "train",
+      "reason": "label_conflict",
+      "relative_path": "n02094114-Norfolk_terrier/n02094114_1696.jpg",
+      "class_id": 34,
+      "breed_key": "norfolk_terrier",
+      "sha256": "66df9b69baeadcc35c2f7ac6936e03a0a652c96d3c597b8e167810354dcee364",
+      "duplicate_of": [
+        "n02094258_1408"
+      ]
+    },
+    {
+      "image_id": "n02094258_1408",
+      "split": "train",
+      "reason": "label_conflict",
+      "relative_path": "n02094258-Norwich_terrier/n02094258_1408.jpg",
+      "class_id": 35,
+      "breed_key": "norwich_terrier",
+      "sha256": "66df9b69baeadcc35c2f7ac6936e03a0a652c96d3c597b8e167810354dcee364",
+      "duplicate_of": [
+        "n02094114_1696"
+      ]
+    },
+    {
+      "image_id": "n02094258_880",
+      "split": "val",
+      "reason": "dup_with_test+label_conflict",
+      "relative_path": "n02094258-Norwich_terrier/n02094258_880.jpg",
+      "class_id": 35,
+      "breed_key": "norwich_terrier",
+      "sha256": "00c7c1c44422099f8f419e85e26fd1e70d57b07141c31f686263db29046f2564",
+      "duplicate_of": [
+        "n02094114_1020"
+      ]
+    },
+    {
+      "image_id": "n02095314_2754",
+      "split": "train",
+      "reason": "dup_with_test+label_conflict",
+      "relative_path": "n02095314-wire-haired_fox_terrier/n02095314_2754.jpg",
+      "class_id": 37,
+      "breed_key": "wire-haired_fox_terrier",
+      "sha256": "dc3bbbfcf4976529622210b101145d39699990be6f191911bb4634068240df85",
+      "duplicate_of": [
+        "n02095570_3101"
+      ]
+    },
+    {
+      "image_id": "n02095314_2964",
+      "split": "train",
+      "reason": "label_conflict",
+      "relative_path": "n02095314-wire-haired_fox_terrier/n02095314_2964.jpg",
+      "class_id": 37,
+      "breed_key": "wire-haired_fox_terrier",
+      "sha256": "2718bd60701a99d7028753da954e1fc86839646936faf3f4fcf5f299d14d6a7a",
+      "duplicate_of": [
+        "n02095570_5404"
+      ]
+    },
+    {
+      "image_id": "n02095314_80",
+      "split": "train",
+      "reason": "label_conflict",
+      "relative_path": "n02095314-wire-haired_fox_terrier/n02095314_80.jpg",
+      "class_id": 37,
+      "breed_key": "wire-haired_fox_terrier",
+      "sha256": "3ef8192520db6f45093fda7d5baebf065e706e64cc88ea52ca2a329013a18992",
+      "duplicate_of": [
+        "n02093991_114"
+      ]
+    },
+    {
+      "image_id": "n02095570_1575",
+      "split": "train",
+      "reason": "dup_with_test+label_conflict",
+      "relative_path": "n02095570-Lakeland_terrier/n02095570_1575.jpg",
+      "class_id": 38,
+      "breed_key": "lakeland_terrier",
+      "sha256": "96dec2ea80fd32040347d1079fba5103e5f3cffe4ce61d30a7e58e22df973640",
+      "duplicate_of": [
+        "n02095889_1582"
+      ]
+    },
+    {
+      "image_id": "n02095570_5404",
+      "split": "train",
+      "reason": "label_conflict",
+      "relative_path": "n02095570-Lakeland_terrier/n02095570_5404.jpg",
+      "class_id": 38,
+      "breed_key": "lakeland_terrier",
+      "sha256": "2718bd60701a99d7028753da954e1fc86839646936faf3f4fcf5f299d14d6a7a",
+      "duplicate_of": [
+        "n02095314_2964"
+      ]
+    },
+    {
+      "image_id": "n02095570_6443",
+      "split": "train",
+      "reason": "dup_with_test+label_conflict",
+      "relative_path": "n02095570-Lakeland_terrier/n02095570_6443.jpg",
+      "class_id": 38,
+      "breed_key": "lakeland_terrier",
+      "sha256": "861db0095a380e6cdba5230de930bb0cae642ff58a06c38346b840d02c15a394",
+      "duplicate_of": [
+        "n02095314_3509"
+      ]
+    },
+    {
+      "image_id": "n02095889_2134",
+      "split": "train",
+      "reason": "dup_with_test",
+      "relative_path": "n02095889-Sealyham_terrier/n02095889_2134.jpg",
+      "class_id": 39,
+      "breed_key": "sealyham_terrier",
+      "sha256": "7c63c47da0adde7ffa644b658b519b47709bcba55f9393dad9f9621e19e635a5",
+      "duplicate_of": [
+        "n02095889_2471"
+      ]
+    },
+    {
+      "image_id": "n02097047_951",
+      "split": "val",
+      "reason": "label_conflict",
+      "relative_path": "n02097047-miniature_schnauzer/n02097047_951.jpg",
+      "class_id": 45,
+      "breed_key": "miniature_schnauzer",
+      "sha256": "f3b9fb979ae5abf7b384e59286966ee76fb19fbf132911529ee85edf66c4c695",
+      "duplicate_of": [
+        "n02097209_583"
+      ]
+    },
+    {
+      "image_id": "n02097209_583",
+      "split": "val",
+      "reason": "label_conflict",
+      "relative_path": "n02097209-standard_schnauzer/n02097209_583.jpg",
+      "class_id": 47,
+      "breed_key": "standard_schnauzer",
+      "sha256": "f3b9fb979ae5abf7b384e59286966ee76fb19fbf132911529ee85edf66c4c695",
+      "duplicate_of": [
+        "n02097047_951"
+      ]
+    },
+    {
+      "image_id": "n02097474_4907",
+      "split": "train",
+      "reason": "label_conflict",
+      "relative_path": "n02097474-Tibetan_terrier/n02097474_4907.jpg",
+      "class_id": 49,
+      "breed_key": "tibetan_terrier",
+      "sha256": "3180080adc12d4a8460a7b5c2fec0ffa25055604648bc3a0c3b52557d3df3909",
+      "duplicate_of": [
+        "n02098105_2456"
+      ]
+    },
+    {
+      "image_id": "n02098105_2456",
+      "split": "train",
+      "reason": "label_conflict",
+      "relative_path": "n02098105-soft-coated_wheaten_terrier/n02098105_2456.jpg",
+      "class_id": 51,
+      "breed_key": "soft-coated_wheaten_terrier",
+      "sha256": "3180080adc12d4a8460a7b5c2fec0ffa25055604648bc3a0c3b52557d3df3909",
+      "duplicate_of": [
+        "n02097474_4907"
+      ]
+    },
+    {
+      "image_id": "n02101556_5512",
+      "split": "train",
+      "reason": "dup_with_test",
+      "relative_path": "n02101556-clumber/n02101556_5512.jpg",
+      "class_id": 65,
+      "breed_key": "clumber",
+      "sha256": "f97183aa8d0a6fe62cd14dcec4c13e47573b13bb7b160c1dcbfaecbcf713d3a1",
+      "duplicate_of": [
+        "n02101556_5903"
+      ]
+    },
+    {
+      "image_id": "n02102973_2645",
+      "split": "train",
+      "reason": "dup_with_test",
+      "relative_path": "n02102973-Irish_water_spaniel/n02102973_2645.jpg",
+      "class_id": 70,
+      "breed_key": "irish_water_spaniel",
+      "sha256": "3a6a24501d033e6469f8c57675f80e36005e95956a47e482a293021559a3368a",
+      "duplicate_of": [
+        "n02102973_4469"
+      ]
+    },
+    {
+      "image_id": "n02104365_5740",
+      "split": "train",
+      "reason": "dup_with_test",
+      "relative_path": "n02104365-schipperke/n02104365_5740.jpg",
+      "class_id": 72,
+      "breed_key": "schipperke",
+      "sha256": "a11eb377733161dfb1d57238e30fc68df7a701c8777bfca0aaee9a7175389178",
+      "duplicate_of": [
+        "n02104365_7953"
+      ]
+    },
+    {
+      "image_id": "n02105056_2194",
+      "split": "train",
+      "reason": "dup_with_test+label_conflict",
+      "relative_path": "n02105056-groenendael/n02105056_2194.jpg",
+      "class_id": 73,
+      "breed_key": "groenendael",
+      "sha256": "daf9e0aef36e233fc7f9ad614604b53687acc02cb4f4218dccbf0d404df578b0",
+      "duplicate_of": [
+        "n02104365_9552"
+      ]
+    },
+    {
+      "image_id": "n02105056_785",
+      "split": "train",
+      "reason": "dup_with_test",
+      "relative_path": "n02105056-groenendael/n02105056_785.jpg",
+      "class_id": 73,
+      "breed_key": "groenendael",
+      "sha256": "27a4cff8de32476e0d98fe07d50d67fa277487631f86f53712bfb449cefa2dc6",
+      "duplicate_of": [
+        "n02105056_5700"
+      ]
+    },
+    {
+      "image_id": "n02105251_7647",
+      "split": "train",
+      "reason": "dup_with_test+label_conflict",
+      "relative_path": "n02105251-briard/n02105251_7647.jpg",
+      "class_id": 75,
+      "breed_key": "briard",
+      "sha256": "574ac0e662d1e6dc922099162eb40f926fd21bd4610c6a17ad71c5bf67af8c3b",
+      "duplicate_of": [
+        "n02091134_16337"
+      ]
+    },
+    {
+      "image_id": "n02106030_10021",
+      "split": "val",
+      "reason": "label_conflict",
+      "relative_path": "n02106030-collie/n02106030_10021.jpg",
+      "class_id": 80,
+      "breed_key": "collie",
+      "sha256": "0ec9221912a41c737f0ca82704b536e9078c30190d166d7d299a1f4bbc11eaad",
+      "duplicate_of": [
+        "n02106166_4107"
+      ]
+    },
+    {
+      "image_id": "n02106030_15829",
+      "split": "train",
+      "reason": "dup_with_test+label_conflict",
+      "relative_path": "n02106030-collie/n02106030_15829.jpg",
+      "class_id": 80,
+      "breed_key": "collie",
+      "sha256": "b2d9a954b1e9299402924ea5a386d630a892c2ee8bf0fe63ca8e2023f085b536",
+      "duplicate_of": [
+        "n02106166_6512"
+      ]
+    },
+    {
+      "image_id": "n02106030_2522",
+      "split": "train",
+      "reason": "label_conflict",
+      "relative_path": "n02106030-collie/n02106030_2522.jpg",
+      "class_id": 80,
+      "breed_key": "collie",
+      "sha256": "bafccc45fd529ec379d42bbb6b06944620f96d849dcc7826af35e01565738f2d",
+      "duplicate_of": [
+        "n02106166_1031"
+      ]
+    },
+    {
+      "image_id": "n02106030_873",
+      "split": "train",
+      "reason": "label_conflict",
+      "relative_path": "n02106030-collie/n02106030_873.jpg",
+      "class_id": 80,
+      "breed_key": "collie",
+      "sha256": "2bc0c6b305823b784079b835e579425c3200f85182e03da5198ed949fda36b8a",
+      "duplicate_of": [
+        "n02106166_346"
+      ]
+    },
+    {
+      "image_id": "n02106166_1031",
+      "split": "train",
+      "reason": "label_conflict",
+      "relative_path": "n02106166-Border_collie/n02106166_1031.jpg",
+      "class_id": 81,
+      "breed_key": "border_collie",
+      "sha256": "bafccc45fd529ec379d42bbb6b06944620f96d849dcc7826af35e01565738f2d",
+      "duplicate_of": [
+        "n02106030_2522"
+      ]
+    },
+    {
+      "image_id": "n02106166_346",
+      "split": "train",
+      "reason": "label_conflict",
+      "relative_path": "n02106166-Border_collie/n02106166_346.jpg",
+      "class_id": 81,
+      "breed_key": "border_collie",
+      "sha256": "2bc0c6b305823b784079b835e579425c3200f85182e03da5198ed949fda36b8a",
+      "duplicate_of": [
+        "n02106030_873"
+      ]
+    },
+    {
+      "image_id": "n02106166_4107",
+      "split": "val",
+      "reason": "label_conflict",
+      "relative_path": "n02106166-Border_collie/n02106166_4107.jpg",
+      "class_id": 81,
+      "breed_key": "border_collie",
+      "sha256": "0ec9221912a41c737f0ca82704b536e9078c30190d166d7d299a1f4bbc11eaad",
+      "duplicate_of": [
+        "n02106030_10021"
+      ]
+    },
+    {
+      "image_id": "n02106166_6084",
+      "split": "train",
+      "reason": "dup_with_test+label_conflict",
+      "relative_path": "n02106166-Border_collie/n02106166_6084.jpg",
+      "class_id": 81,
+      "breed_key": "border_collie",
+      "sha256": "60494df0a963da6fc31233c2c123c9c5478f3a87262ae69beb849b6f2f36958a",
+      "duplicate_of": [
+        "n02106030_14811"
+      ]
+    },
+    {
+      "image_id": "n02107683_5397",
+      "split": "train",
+      "reason": "label_conflict",
+      "relative_path": "n02107683-Bernese_mountain_dog/n02107683_5397.jpg",
+      "class_id": 88,
+      "breed_key": "bernese_mountain_dog",
+      "sha256": "1f4a139a19698ca5840cee55105c1fc5d67914c38af8e28fae19af7c5f7cb9d0",
+      "duplicate_of": [
+        "n02107908_3531"
+      ]
+    },
+    {
+      "image_id": "n02107908_3531",
+      "split": "train",
+      "reason": "label_conflict",
+      "relative_path": "n02107908-Appenzeller/n02107908_3531.jpg",
+      "class_id": 89,
+      "breed_key": "appenzeller",
+      "sha256": "1f4a139a19698ca5840cee55105c1fc5d67914c38af8e28fae19af7c5f7cb9d0",
+      "duplicate_of": [
+        "n02107683_5397"
+      ]
+    },
+    {
+      "image_id": "n02107908_47",
+      "split": "train",
+      "reason": "dup_with_test+label_conflict",
+      "relative_path": "n02107908-Appenzeller/n02107908_47.jpg",
+      "class_id": 89,
+      "breed_key": "appenzeller",
+      "sha256": "dd55069f26776977a31bd540612398dc3eb48a6bf49269ce845b1581a0b31cb0",
+      "duplicate_of": [
+        "n02107683_71"
+      ]
+    },
+    {
+      "image_id": "n02108000_331",
+      "split": "val",
+      "reason": "dup_with_test",
+      "relative_path": "n02108000-EntleBucher/n02108000_331.jpg",
+      "class_id": 90,
+      "breed_key": "entlebucher",
+      "sha256": "54f029becedc8428fbc134b986b192a792f2a240fff7b7a696e7e8f1d5bf2f21",
+      "duplicate_of": [
+        "n02108000_2891"
+      ]
+    },
+    {
+      "image_id": "n02109525_1314",
+      "split": "val",
+      "reason": "dup_with_test",
+      "relative_path": "n02109525-Saint_Bernard/n02109525_1314.jpg",
+      "class_id": 96,
+      "breed_key": "saint_bernard",
+      "sha256": "37b9356fb6bd67374f2479de2e808712359408a8040e6cc4b14fe56e7c27abdd",
+      "duplicate_of": [
+        "n02109525_7982"
+      ]
+    },
+    {
+      "image_id": "n02109961_5924",
+      "split": "train",
+      "reason": "label_conflict",
+      "relative_path": "n02109961-Eskimo_dog/n02109961_5924.jpg",
+      "class_id": 97,
+      "breed_key": "eskimo_dog",
+      "sha256": "98da7d3227ddf4fe0f640983b72dc8df896f027eb4165e72a6274d5f847e480f",
+      "duplicate_of": [
+        "n02110185_4115"
+      ]
+    },
+    {
+      "image_id": "n02110185_4115",
+      "split": "train",
+      "reason": "label_conflict",
+      "relative_path": "n02110185-Siberian_husky/n02110185_4115.jpg",
+      "class_id": 99,
+      "breed_key": "siberian_husky",
+      "sha256": "98da7d3227ddf4fe0f640983b72dc8df896f027eb4165e72a6274d5f847e480f",
+      "duplicate_of": [
+        "n02109961_5924"
+      ]
+    },
+    {
+      "image_id": "n02112706_1882",
+      "split": "train",
+      "reason": "dup_with_test",
+      "relative_path": "n02112706-Brabancon_griffon/n02112706_1882.jpg",
+      "class_id": 110,
+      "breed_key": "brabancon_griffon",
+      "sha256": "237350f7912995cedb3fabc5118e06f2243f2f619c3212460bd0149db8dc37b2",
+      "duplicate_of": [
+        "n02112706_2070"
+      ]
+    },
+    {
+      "image_id": "n02112706_2074",
+      "split": "train",
+      "reason": "dup_with_test",
+      "relative_path": "n02112706-Brabancon_griffon/n02112706_2074.jpg",
+      "class_id": 110,
+      "breed_key": "brabancon_griffon",
+      "sha256": "ca475a28761dc20faf816b530ea1d4a72c86e774bb26100841bd574d1f83e50a",
+      "duplicate_of": [
+        "n02112706_1833"
+      ]
+    },
+    {
+      "image_id": "n02112706_2161",
+      "split": "train",
+      "reason": "dup_with_test",
+      "relative_path": "n02112706-Brabancon_griffon/n02112706_2161.jpg",
+      "class_id": 110,
+      "breed_key": "brabancon_griffon",
+      "sha256": "d34fc12e1a3e607c7c63e5b70442fd84a197d55c76949261206517a57b7e2d58",
+      "duplicate_of": [
+        "n02112706_1202"
+      ]
+    },
+    {
+      "image_id": "n02112706_2191",
+      "split": "train",
+      "reason": "dup_with_test",
+      "relative_path": "n02112706-Brabancon_griffon/n02112706_2191.jpg",
+      "class_id": 110,
+      "breed_key": "brabancon_griffon",
+      "sha256": "94ef1800db2838786777133dba31909a31ce8a3ae4d5d3312a79da18ba6c120d",
+      "duplicate_of": [
+        "n02112706_1379"
+      ]
+    },
+    {
+      "image_id": "n02112706_539",
+      "split": "val",
+      "reason": "dup_with_test",
+      "relative_path": "n02112706-Brabancon_griffon/n02112706_539.jpg",
+      "class_id": 110,
+      "breed_key": "brabancon_griffon",
+      "sha256": "f70ab11b957670fbad6b9b4b72df9daee95842e49714cad4b0336c61f313cba3",
+      "duplicate_of": [
+        "n02112706_1568"
+      ]
+    },
+    {
+      "image_id": "n02113186_11400",
+      "split": "train",
+      "reason": "dup_with_test",
+      "relative_path": "n02113186-Cardigan/n02113186_11400.jpg",
+      "class_id": 112,
+      "breed_key": "cardigan",
+      "sha256": "be2f6ae4e654e1aebb2a561030ccecbd1bd74bb98075a1ed6f98c4888eb93c49",
+      "duplicate_of": [
+        "n02113186_1030"
+      ]
+    },
+    {
+      "image_id": "n02113624_1804",
+      "split": "train",
+      "reason": "label_conflict",
+      "relative_path": "n02113624-toy_poodle/n02113624_1804.jpg",
+      "class_id": 113,
+      "breed_key": "toy_poodle",
+      "sha256": "70a70d58e2d5ec96a90b55a0b034d38a484728487571f463177ff327b8db87af",
+      "duplicate_of": [
+        "n02113712_1252"
+      ]
+    },
+    {
+      "image_id": "n02113624_2244",
+      "split": "train",
+      "reason": "label_conflict",
+      "relative_path": "n02113624-toy_poodle/n02113624_2244.jpg",
+      "class_id": 113,
+      "breed_key": "toy_poodle",
+      "sha256": "4ec19cfd409f528489b0955f7223ee40040fc7f54a480e064375963fc4aa7d7e",
+      "duplicate_of": [
+        "n02113712_1546"
+      ]
+    },
+    {
+      "image_id": "n02113624_2258",
+      "split": "val",
+      "reason": "dup_with_test+label_conflict",
+      "relative_path": "n02113624-toy_poodle/n02113624_2258.jpg",
+      "class_id": 113,
+      "breed_key": "toy_poodle",
+      "sha256": "2c887d1145dab71e686e43b62be65810c4f11a5c6e8b59a67bf25338e64fa208",
+      "duplicate_of": [
+        "n02113712_1558"
+      ]
+    },
+    {
+      "image_id": "n02113712_1252",
+      "split": "train",
+      "reason": "label_conflict",
+      "relative_path": "n02113712-miniature_poodle/n02113712_1252.jpg",
+      "class_id": 114,
+      "breed_key": "miniature_poodle",
+      "sha256": "70a70d58e2d5ec96a90b55a0b034d38a484728487571f463177ff327b8db87af",
+      "duplicate_of": [
+        "n02113624_1804"
+      ]
+    },
+    {
+      "image_id": "n02113712_1546",
+      "split": "train",
+      "reason": "label_conflict",
+      "relative_path": "n02113712-miniature_poodle/n02113712_1546.jpg",
+      "class_id": 114,
+      "breed_key": "miniature_poodle",
+      "sha256": "4ec19cfd409f528489b0955f7223ee40040fc7f54a480e064375963fc4aa7d7e",
+      "duplicate_of": [
+        "n02113624_2244"
+      ]
+    },
+    {
+      "image_id": "n02113712_230",
+      "split": "train",
+      "reason": "label_conflict",
+      "relative_path": "n02113712-miniature_poodle/n02113712_230.jpg",
+      "class_id": 114,
+      "breed_key": "miniature_poodle",
+      "sha256": "3a34b5886f54555b089ebe6767b13057439f650c575a7b81eaf660bef48bea92",
+      "duplicate_of": [
+        "n02113799_254"
+      ]
+    },
+    {
+      "image_id": "n02113799_254",
+      "split": "train",
+      "reason": "label_conflict",
+      "relative_path": "n02113799-standard_poodle/n02113799_254.jpg",
+      "class_id": 115,
+      "breed_key": "standard_poodle",
+      "sha256": "3a34b5886f54555b089ebe6767b13057439f650c575a7b81eaf660bef48bea92",
+      "duplicate_of": [
+        "n02113712_230"
+      ]
+    },
+    {
+      "image_id": "n02113978_1069",
+      "split": "train",
+      "reason": "dup_with_test",
+      "relative_path": "n02113978-Mexican_hairless/n02113978_1069.jpg",
+      "class_id": 116,
+      "breed_key": "mexican_hairless",
+      "sha256": "37b6b030d1e06d69cb4a84bafc398ee0d3dde898e3bfe86b82ea9d92c5e8e01d",
+      "duplicate_of": [
+        "n02113978_3474"
+      ]
+    },
+    {
+      "image_id": "n02115913_4119",
+      "split": "train",
+      "reason": "dup_with_test",
+      "relative_path": "n02115913-dhole/n02115913_4119.jpg",
+      "class_id": 118,
+      "breed_key": "dhole",
+      "sha256": "23e811db6cccecbaf38329bbdd35126106bb603217f67b54466763c0a609f1b2",
+      "duplicate_of": [
+        "n02115913_750"
+      ]
+    },
+    {
+      "image_id": "n02115913_739",
+      "split": "train",
+      "reason": "dup_with_test+label_conflict",
+      "relative_path": "n02115913-dhole/n02115913_739.jpg",
+      "class_id": 118,
+      "breed_key": "dhole",
+      "sha256": "53fe4902982882d9a4485666787ff8424a45a42d4d1e09b34fb2cd09013f082d",
+      "duplicate_of": [
+        "n02115641_2440"
+      ]
+    }
+  ],
+  "excluded_count": 67,
+  "issues": [
+    {
+      "code": "bbox_clipped",
+      "image_id": "n02098105_2063",
+      "object_index": 0,
+      "xml_box": [
+        92,
+        42,
+        511,
+        328
+      ],
+      "image_size": [
+        500,
+        375
+      ],
+      "result": [
+        92,
+        42,
+        500,
+        329
+      ]
+    },
+    {
+      "code": "extension_format_mismatch",
+      "image_id": "n02105855_2933",
+      "actual_format": "PNG"
+    },
+    {
+      "code": "non_rgb_mode",
+      "image_id": "n02105855_2933",
+      "mode": "RGBA",
+      "decision": "converted to RGB"
+    },
+    {
+      "code": "bbox_clipped",
+      "image_id": "n02106030_3948",
+      "object_index": 0,
+      "xml_box": [
+        10,
+        10,
+        286,
+        380
+      ],
+      "image_size": [
+        284,
+        360
+      ],
+      "result": [
+        10,
+        10,
+        284,
+        360
+      ]
+    },
+    {
+      "code": "invalid_exif_orientation_value",
+      "image_id": "n02091635_1808",
+      "orientation": 0,
+      "decision": "ignored (no rotation), same as PIL.ImageOps.exif_transpose"
+    }
+  ],
+  "issue_counts": {
+    "bbox_clipped": 2,
+    "extension_format_mismatch": 1,
+    "invalid_exif_orientation_value": 1,
+    "non_rgb_mode": 1
+  },
+  "stats": {
+    "bbox_min_side_lt_64": 81,
+    "exif_orientation_1": 82,
+    "format_JPEG": 20579,
+    "format_PNG": 1,
+    "multi_object_records": 1358,
+    "xml_filename_placeholder": 624
+  },
+  "duplicates": {
+    "method": "sha256 of file bytes",
+    "groups": [
+      {
+        "sha256": "00c7c1c44422099f8f419e85e26fd1e70d57b07141c31f686263db29046f2564",
+        "image_ids": [
+          "n02094114_1020",
+          "n02094258_880"
+        ],
+        "splits": [
+          "test",
+          "val"
+        ],
+        "breed_keys": [
+          "norfolk_terrier",
+          "norwich_terrier"
+        ],
+        "cross_split": true,
+        "cross_class": true
+      },
+      {
+        "sha256": "011a26e44d3eb347f6526bcca40774cfe9ef086f023f7095138203c6d0425bdc",
+        "image_ids": [
+          "n02085782_186",
+          "n02086646_172"
+        ],
+        "splits": [
+          "test",
+          "train"
+        ],
+        "breed_keys": [
+          "blenheim_spaniel",
+          "japanese_spaniel"
+        ],
+        "cross_split": true,
+        "cross_class": true
+      },
+      {
+        "sha256": "032c068b2c012536dcb54b33541f6d62ecde03287da113d0991cbe544804b0bf",
+        "image_ids": [
+          "n02088466_7015",
+          "n02088466_8078"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "bloodhound"
+        ],
+        "cross_split": false,
+        "cross_class": false
+      },
+      {
+        "sha256": "03c0ee9069682a1941bd935c8ab31552a98b852bdcb4106db9bd95e2cd1b41ef",
+        "image_ids": [
+          "n02112706_62",
+          "n02112706_866"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "brabancon_griffon"
+        ],
+        "cross_split": false,
+        "cross_class": false
+      },
+      {
+        "sha256": "066f456810f20c79c49f4e13bcf16f5a4c9082da9a8a1ea5673ce66a9079472b",
+        "image_ids": [
+          "n02085782_313",
+          "n02086646_280"
+        ],
+        "splits": [
+          "test",
+          "train"
+        ],
+        "breed_keys": [
+          "blenheim_spaniel",
+          "japanese_spaniel"
+        ],
+        "cross_split": true,
+        "cross_class": true
+      },
+      {
+        "sha256": "06b55353333fb9eb29fb3062fbcc0bbc6b564516ed2c8c66b252ebbe94eb4a76",
+        "image_ids": [
+          "n02106030_16338",
+          "n02106166_6710"
+        ],
+        "splits": [
+          "test"
+        ],
+        "breed_keys": [
+          "border_collie",
+          "collie"
+        ],
+        "cross_split": false,
+        "cross_class": true
+      },
+      {
+        "sha256": "0748075871605ec08fb74b46b3848a0db5b5f4d67553b4a031be534f018896b6",
+        "image_ids": [
+          "n02097298_2083",
+          "n02098286_830"
+        ],
+        "splits": [
+          "test"
+        ],
+        "breed_keys": [
+          "scotch_terrier",
+          "west_highland_white_terrier"
+        ],
+        "cross_split": false,
+        "cross_class": true
+      },
+      {
+        "sha256": "0a3b98fc9c6775beae8d2e681c9f302dc82a210c4b7ece0f6b181976435f66ed",
+        "image_ids": [
+          "n02086646_1445",
+          "n02086646_422"
+        ],
+        "splits": [
+          "test",
+          "train"
+        ],
+        "breed_keys": [
+          "blenheim_spaniel"
+        ],
+        "cross_split": true,
+        "cross_class": false
+      },
+      {
+        "sha256": "0c140af4776b2b7c420e352c8a3bc9591dd2d401e9d3c807b3edecc671495bc6",
+        "image_ids": [
+          "n02113978_1323",
+          "n02113978_737"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "mexican_hairless"
+        ],
+        "cross_split": false,
+        "cross_class": false
+      },
+      {
+        "sha256": "0ec9221912a41c737f0ca82704b536e9078c30190d166d7d299a1f4bbc11eaad",
+        "image_ids": [
+          "n02106030_10021",
+          "n02106166_4107"
+        ],
+        "splits": [
+          "val"
+        ],
+        "breed_keys": [
+          "border_collie",
+          "collie"
+        ],
+        "cross_split": false,
+        "cross_class": true
+      },
+      {
+        "sha256": "11db869a2dca142f30133f60c847e44448f57e061ae4d939d959a9d624717976",
+        "image_ids": [
+          "n02115913_1552",
+          "n02115913_3270"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "dhole"
+        ],
+        "cross_split": false,
+        "cross_class": false
+      },
+      {
+        "sha256": "1d14d610601fa85c68eb959042aed27d5cf5b92b2386222814f9ff3c4b087dc0",
+        "image_ids": [
+          "n02095314_3189",
+          "n02095314_3227"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "wire-haired_fox_terrier"
+        ],
+        "cross_split": false,
+        "cross_class": false
+      },
+      {
+        "sha256": "1f4a139a19698ca5840cee55105c1fc5d67914c38af8e28fae19af7c5f7cb9d0",
+        "image_ids": [
+          "n02107683_5397",
+          "n02107908_3531"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "appenzeller",
+          "bernese_mountain_dog"
+        ],
+        "cross_split": false,
+        "cross_class": true
+      },
+      {
+        "sha256": "20e96a9ecd8f3afa1065f16eee727b3e2a76896dcaf6b0827303ab8cbc7bc26a",
+        "image_ids": [
+          "n02089867_3108",
+          "n02089867_3177"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "walker_hound"
+        ],
+        "cross_split": false,
+        "cross_class": false
+      },
+      {
+        "sha256": "235e5f9512f1f316632f269298513e41a973dac4079f128a16936841bfac96ef",
+        "image_ids": [
+          "n02088466_7462",
+          "n02090379_3300"
+        ],
+        "splits": [
+          "val"
+        ],
+        "breed_keys": [
+          "bloodhound",
+          "redbone"
+        ],
+        "cross_split": false,
+        "cross_class": true
+      },
+      {
+        "sha256": "237350f7912995cedb3fabc5118e06f2243f2f619c3212460bd0149db8dc37b2",
+        "image_ids": [
+          "n02112706_1882",
+          "n02112706_2070"
+        ],
+        "splits": [
+          "test",
+          "train"
+        ],
+        "breed_keys": [
+          "brabancon_griffon"
+        ],
+        "cross_split": true,
+        "cross_class": false
+      },
+      {
+        "sha256": "23e811db6cccecbaf38329bbdd35126106bb603217f67b54466763c0a609f1b2",
+        "image_ids": [
+          "n02115913_4119",
+          "n02115913_750"
+        ],
+        "splits": [
+          "test",
+          "train"
+        ],
+        "breed_keys": [
+          "dhole"
+        ],
+        "cross_split": true,
+        "cross_class": false
+      },
+      {
+        "sha256": "2718bd60701a99d7028753da954e1fc86839646936faf3f4fcf5f299d14d6a7a",
+        "image_ids": [
+          "n02095314_2964",
+          "n02095570_5404"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "lakeland_terrier",
+          "wire-haired_fox_terrier"
+        ],
+        "cross_split": false,
+        "cross_class": true
+      },
+      {
+        "sha256": "27a4cff8de32476e0d98fe07d50d67fa277487631f86f53712bfb449cefa2dc6",
+        "image_ids": [
+          "n02105056_5700",
+          "n02105056_785"
+        ],
+        "splits": [
+          "test",
+          "train"
+        ],
+        "breed_keys": [
+          "groenendael"
+        ],
+        "cross_split": true,
+        "cross_class": false
+      },
+      {
+        "sha256": "2bc0c6b305823b784079b835e579425c3200f85182e03da5198ed949fda36b8a",
+        "image_ids": [
+          "n02106030_873",
+          "n02106166_346"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "border_collie",
+          "collie"
+        ],
+        "cross_split": false,
+        "cross_class": true
+      },
+      {
+        "sha256": "2c887d1145dab71e686e43b62be65810c4f11a5c6e8b59a67bf25338e64fa208",
+        "image_ids": [
+          "n02113624_2258",
+          "n02113712_1558"
+        ],
+        "splits": [
+          "test",
+          "val"
+        ],
+        "breed_keys": [
+          "miniature_poodle",
+          "toy_poodle"
+        ],
+        "cross_split": true,
+        "cross_class": true
+      },
+      {
+        "sha256": "3093468ac001b404c6ade91963e774076af96b83c848cd2d87a7a1a1365628b4",
+        "image_ids": [
+          "n02085782_50",
+          "n02086910_103"
+        ],
+        "splits": [
+          "test"
+        ],
+        "breed_keys": [
+          "japanese_spaniel",
+          "papillon"
+        ],
+        "cross_split": false,
+        "cross_class": true
+      },
+      {
+        "sha256": "3180080adc12d4a8460a7b5c2fec0ffa25055604648bc3a0c3b52557d3df3909",
+        "image_ids": [
+          "n02097474_4907",
+          "n02098105_2456"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "soft-coated_wheaten_terrier",
+          "tibetan_terrier"
+        ],
+        "cross_split": false,
+        "cross_class": true
+      },
+      {
+        "sha256": "337a5eb722f8e61e3bcccc0fb3640138e4cdcc493b24316dfa3d6d06990689a8",
+        "image_ids": [
+          "n02093647_2585",
+          "n02093647_518"
+        ],
+        "splits": [
+          "test",
+          "train"
+        ],
+        "breed_keys": [
+          "bedlington_terrier"
+        ],
+        "cross_split": true,
+        "cross_class": false
+      },
+      {
+        "sha256": "34b725619d440b1738500d08b9830c4ac38ec478c23b2bcd7944fda7b6d763e7",
+        "image_ids": [
+          "n02097130_857",
+          "n02097209_585"
+        ],
+        "splits": [
+          "test"
+        ],
+        "breed_keys": [
+          "giant_schnauzer",
+          "standard_schnauzer"
+        ],
+        "cross_split": false,
+        "cross_class": true
+      },
+      {
+        "sha256": "37b6b030d1e06d69cb4a84bafc398ee0d3dde898e3bfe86b82ea9d92c5e8e01d",
+        "image_ids": [
+          "n02113978_1069",
+          "n02113978_3474"
+        ],
+        "splits": [
+          "test",
+          "train"
+        ],
+        "breed_keys": [
+          "mexican_hairless"
+        ],
+        "cross_split": true,
+        "cross_class": false
+      },
+      {
+        "sha256": "37b9356fb6bd67374f2479de2e808712359408a8040e6cc4b14fe56e7c27abdd",
+        "image_ids": [
+          "n02109525_1314",
+          "n02109525_7982"
+        ],
+        "splits": [
+          "test",
+          "val"
+        ],
+        "breed_keys": [
+          "saint_bernard"
+        ],
+        "cross_split": true,
+        "cross_class": false
+      },
+      {
+        "sha256": "3a34b5886f54555b089ebe6767b13057439f650c575a7b81eaf660bef48bea92",
+        "image_ids": [
+          "n02113712_230",
+          "n02113799_254"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "miniature_poodle",
+          "standard_poodle"
+        ],
+        "cross_split": false,
+        "cross_class": true
+      },
+      {
+        "sha256": "3a6a24501d033e6469f8c57675f80e36005e95956a47e482a293021559a3368a",
+        "image_ids": [
+          "n02102973_2645",
+          "n02102973_4469"
+        ],
+        "splits": [
+          "test",
+          "train"
+        ],
+        "breed_keys": [
+          "irish_water_spaniel"
+        ],
+        "cross_split": true,
+        "cross_class": false
+      },
+      {
+        "sha256": "3dd73147579c69d99aad7333eb1e504d65f21cee48143b7b31c340c11b8d29af",
+        "image_ids": [
+          "n02090379_4667",
+          "n02090379_855"
+        ],
+        "splits": [
+          "test",
+          "val"
+        ],
+        "breed_keys": [
+          "redbone"
+        ],
+        "cross_split": true,
+        "cross_class": false
+      },
+      {
+        "sha256": "3ef8192520db6f45093fda7d5baebf065e706e64cc88ea52ca2a329013a18992",
+        "image_ids": [
+          "n02093991_114",
+          "n02095314_80"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "irish_terrier",
+          "wire-haired_fox_terrier"
+        ],
+        "cross_split": false,
+        "cross_class": true
+      },
+      {
+        "sha256": "4a9b495f13c500f9deea3efb911c86ce1cfeb9a8fc8c14e949400c60d581c27d",
+        "image_ids": [
+          "n02091831_13767",
+          "n02091831_6323"
+        ],
+        "splits": [
+          "test",
+          "train"
+        ],
+        "breed_keys": [
+          "saluki"
+        ],
+        "cross_split": true,
+        "cross_class": false
+      },
+      {
+        "sha256": "4de3bc5d23d24c77e78512a4e650b07bc102823c8f80570106e136b2d6855f13",
+        "image_ids": [
+          "n02097130_4193",
+          "n02097130_5576"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "giant_schnauzer"
+        ],
+        "cross_split": false,
+        "cross_class": false
+      },
+      {
+        "sha256": "4ec19cfd409f528489b0955f7223ee40040fc7f54a480e064375963fc4aa7d7e",
+        "image_ids": [
+          "n02113624_2244",
+          "n02113712_1546"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "miniature_poodle",
+          "toy_poodle"
+        ],
+        "cross_split": false,
+        "cross_class": true
+      },
+      {
+        "sha256": "4f0785d8ac1741423dbb3350f343019d3e4a8d7038301435db30fdfffcec93ad",
+        "image_ids": [
+          "n02092002_5504",
+          "n02092002_5557"
+        ],
+        "splits": [
+          "test"
+        ],
+        "breed_keys": [
+          "scottish_deerhound"
+        ],
+        "cross_split": false,
+        "cross_class": false
+      },
+      {
+        "sha256": "53fe4902982882d9a4485666787ff8424a45a42d4d1e09b34fb2cd09013f082d",
+        "image_ids": [
+          "n02115641_2440",
+          "n02115913_739"
+        ],
+        "splits": [
+          "test",
+          "train"
+        ],
+        "breed_keys": [
+          "dhole",
+          "dingo"
+        ],
+        "cross_split": true,
+        "cross_class": true
+      },
+      {
+        "sha256": "549e872d5f202ef6a670dddef66623d63466654e7b425bc2139fc3158d254aa6",
+        "image_ids": [
+          "n02098105_1090",
+          "n02098105_2945"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "soft-coated_wheaten_terrier"
+        ],
+        "cross_split": false,
+        "cross_class": false
+      },
+      {
+        "sha256": "54f029becedc8428fbc134b986b192a792f2a240fff7b7a696e7e8f1d5bf2f21",
+        "image_ids": [
+          "n02108000_2891",
+          "n02108000_331"
+        ],
+        "splits": [
+          "test",
+          "val"
+        ],
+        "breed_keys": [
+          "entlebucher"
+        ],
+        "cross_split": true,
+        "cross_class": false
+      },
+      {
+        "sha256": "574ac0e662d1e6dc922099162eb40f926fd21bd4610c6a17ad71c5bf67af8c3b",
+        "image_ids": [
+          "n02091134_16337",
+          "n02105251_7647"
+        ],
+        "splits": [
+          "test",
+          "train"
+        ],
+        "breed_keys": [
+          "briard",
+          "whippet"
+        ],
+        "cross_split": true,
+        "cross_class": true
+      },
+      {
+        "sha256": "60494df0a963da6fc31233c2c123c9c5478f3a87262ae69beb849b6f2f36958a",
+        "image_ids": [
+          "n02106030_14811",
+          "n02106166_6084"
+        ],
+        "splits": [
+          "test",
+          "train"
+        ],
+        "breed_keys": [
+          "border_collie",
+          "collie"
+        ],
+        "cross_split": true,
+        "cross_class": true
+      },
+      {
+        "sha256": "64eefa6e9694352a96707efeafd79f44d2afdb233b327a0bc4684b8307316ba1",
+        "image_ids": [
+          "n02104365_4190",
+          "n02104365_5670"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "schipperke"
+        ],
+        "cross_split": false,
+        "cross_class": false
+      },
+      {
+        "sha256": "66df9b69baeadcc35c2f7ac6936e03a0a652c96d3c597b8e167810354dcee364",
+        "image_ids": [
+          "n02094114_1696",
+          "n02094258_1408"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "norfolk_terrier",
+          "norwich_terrier"
+        ],
+        "cross_split": false,
+        "cross_class": true
+      },
+      {
+        "sha256": "6aaed2c294d1ff9c5031a706dded328bfd32ec2e3e4bb729da5c0c0c8100af92",
+        "image_ids": [
+          "n02113978_2141",
+          "n02113978_3832"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "mexican_hairless"
+        ],
+        "cross_split": false,
+        "cross_class": false
+      },
+      {
+        "sha256": "6d6328b045009c5e99348a4009b64d40ea7809da455313f82d2e7cd63adde5c1",
+        "image_ids": [
+          "n02093859_3209",
+          "n02093859_324"
+        ],
+        "splits": [
+          "test"
+        ],
+        "breed_keys": [
+          "kerry_blue_terrier"
+        ],
+        "cross_split": false,
+        "cross_class": false
+      },
+      {
+        "sha256": "70a70d58e2d5ec96a90b55a0b034d38a484728487571f463177ff327b8db87af",
+        "image_ids": [
+          "n02113624_1804",
+          "n02113712_1252"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "miniature_poodle",
+          "toy_poodle"
+        ],
+        "cross_split": false,
+        "cross_class": true
+      },
+      {
+        "sha256": "73cde1d721133ad40df768d6657b4685bbd320361be1abcf12fd683003de87f9",
+        "image_ids": [
+          "n02115913_262",
+          "n02115913_4032"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "dhole"
+        ],
+        "cross_split": false,
+        "cross_class": false
+      },
+      {
+        "sha256": "7432a9788fa074cb3b0508476728dbc922aab314b02cc3394026da09c394f0f6",
+        "image_ids": [
+          "n02086240_3921",
+          "n02097474_7300"
+        ],
+        "splits": [
+          "test"
+        ],
+        "breed_keys": [
+          "shih-tzu",
+          "tibetan_terrier"
+        ],
+        "cross_split": false,
+        "cross_class": true
+      },
+      {
+        "sha256": "74abe07bbb099928c54c6afd4f6f24a58e82125c6280e6a978f6056b1e8497c2",
+        "image_ids": [
+          "n02102480_2041",
+          "n02102480_3436"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "sussex_spaniel"
+        ],
+        "cross_split": false,
+        "cross_class": false
+      },
+      {
+        "sha256": "7530bd56bc62b2c678849a942ed91b07cca7db36976a505216ceb7a98c60fc62",
+        "image_ids": [
+          "n02115913_4117",
+          "n02115913_564"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "dhole"
+        ],
+        "cross_split": false,
+        "cross_class": false
+      },
+      {
+        "sha256": "7663a183c9d0add0a6d9e401cb4e3c1f222851b3cdfde07a44547c65d4ed69d1",
+        "image_ids": [
+          "n02093647_1766",
+          "n02093647_3277"
+        ],
+        "splits": [
+          "test",
+          "train"
+        ],
+        "breed_keys": [
+          "bedlington_terrier"
+        ],
+        "cross_split": true,
+        "cross_class": false
+      },
+      {
+        "sha256": "7961125402b1246b324f726e0ccc717f7c0f71d6bc8418302879ca0377d5698f",
+        "image_ids": [
+          "n02113978_1632",
+          "n02113978_2572"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "mexican_hairless"
+        ],
+        "cross_split": false,
+        "cross_class": false
+      },
+      {
+        "sha256": "7ab473dba8dbd84a4481f745b6261cb1b692564beb7c627d2ace469df5ba652c",
+        "image_ids": [
+          "n02088632_4334",
+          "n02088632_4584"
+        ],
+        "splits": [
+          "test"
+        ],
+        "breed_keys": [
+          "bluetick"
+        ],
+        "cross_split": false,
+        "cross_class": false
+      },
+      {
+        "sha256": "7c63c47da0adde7ffa644b658b519b47709bcba55f9393dad9f9621e19e635a5",
+        "image_ids": [
+          "n02095889_2134",
+          "n02095889_2471"
+        ],
+        "splits": [
+          "test",
+          "train"
+        ],
+        "breed_keys": [
+          "sealyham_terrier"
+        ],
+        "cross_split": true,
+        "cross_class": false
+      },
+      {
+        "sha256": "7cadd9f1a254d1fc8866a9f1676b32612b0604b3aa56f988a1eaa1bdfecd5c06",
+        "image_ids": [
+          "n02092002_1767",
+          "n02092002_4745"
+        ],
+        "splits": [
+          "test",
+          "train"
+        ],
+        "breed_keys": [
+          "scottish_deerhound"
+        ],
+        "cross_split": true,
+        "cross_class": false
+      },
+      {
+        "sha256": "8230b53ca2cdb7490f0dbcb3d33382d2315407538fa281dd1b85fe8715c24f9d",
+        "image_ids": [
+          "n02093991_2923",
+          "n02093991_4670"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "irish_terrier"
+        ],
+        "cross_split": false,
+        "cross_class": false
+      },
+      {
+        "sha256": "861db0095a380e6cdba5230de930bb0cae642ff58a06c38346b840d02c15a394",
+        "image_ids": [
+          "n02095314_3509",
+          "n02095570_6443"
+        ],
+        "splits": [
+          "test",
+          "train"
+        ],
+        "breed_keys": [
+          "lakeland_terrier",
+          "wire-haired_fox_terrier"
+        ],
+        "cross_split": true,
+        "cross_class": true
+      },
+      {
+        "sha256": "87a9c6894b6f3795012d53037db6f577cb777c3478b87bb7197e96dd47790ac6",
+        "image_ids": [
+          "n02105162_2079",
+          "n02105162_6449"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "malinois"
+        ],
+        "cross_split": false,
+        "cross_class": false
+      },
+      {
+        "sha256": "8e68ed0282527c0f336e8e0b7611832174fe52bea384f4e056041d40f381fd7e",
+        "image_ids": [
+          "n02093647_2626",
+          "n02093647_2687"
+        ],
+        "splits": [
+          "test",
+          "val"
+        ],
+        "breed_keys": [
+          "bedlington_terrier"
+        ],
+        "cross_split": true,
+        "cross_class": false
+      },
+      {
+        "sha256": "94ef1800db2838786777133dba31909a31ce8a3ae4d5d3312a79da18ba6c120d",
+        "image_ids": [
+          "n02112706_1379",
+          "n02112706_2191"
+        ],
+        "splits": [
+          "test",
+          "train"
+        ],
+        "breed_keys": [
+          "brabancon_griffon"
+        ],
+        "cross_split": true,
+        "cross_class": false
+      },
+      {
+        "sha256": "95c880fb565ecb30228adec091d46a0ba80a31da9c908dd447df7eb2b6e4bbbb",
+        "image_ids": [
+          "n02112706_2550",
+          "n02112706_420"
+        ],
+        "splits": [
+          "val"
+        ],
+        "breed_keys": [
+          "brabancon_griffon"
+        ],
+        "cross_split": false,
+        "cross_class": false
+      },
+      {
+        "sha256": "96dec2ea80fd32040347d1079fba5103e5f3cffe4ce61d30a7e58e22df973640",
+        "image_ids": [
+          "n02095570_1575",
+          "n02095889_1582"
+        ],
+        "splits": [
+          "test",
+          "train"
+        ],
+        "breed_keys": [
+          "lakeland_terrier",
+          "sealyham_terrier"
+        ],
+        "cross_split": true,
+        "cross_class": true
+      },
+      {
+        "sha256": "98da7d3227ddf4fe0f640983b72dc8df896f027eb4165e72a6274d5f847e480f",
+        "image_ids": [
+          "n02109961_5924",
+          "n02110185_4115"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "eskimo_dog",
+          "siberian_husky"
+        ],
+        "cross_split": false,
+        "cross_class": true
+      },
+      {
+        "sha256": "a11eb377733161dfb1d57238e30fc68df7a701c8777bfca0aaee9a7175389178",
+        "image_ids": [
+          "n02104365_5740",
+          "n02104365_7953"
+        ],
+        "splits": [
+          "test",
+          "train"
+        ],
+        "breed_keys": [
+          "schipperke"
+        ],
+        "cross_split": true,
+        "cross_class": false
+      },
+      {
+        "sha256": "a29c9b3fcd839d1aaccf05cc273b0366a077a2a0a5133c7d2e258639fae1d21e",
+        "image_ids": [
+          "n02093256_6177",
+          "n02093428_8454"
+        ],
+        "splits": [
+          "test"
+        ],
+        "breed_keys": [
+          "american_staffordshire_terrier",
+          "staffordshire_bullterrier"
+        ],
+        "cross_split": false,
+        "cross_class": true
+      },
+      {
+        "sha256": "a33254cda7e69e6814162326287ec843d1444b2fc913eb8e88e4a1fa068a1263",
+        "image_ids": [
+          "n02099429_2263",
+          "n02099429_3513"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "curly-coated_retriever"
+        ],
+        "cross_split": false,
+        "cross_class": false
+      },
+      {
+        "sha256": "a68ced39a803159417bc2cda3c15a304738ebda101fd08b7e6ee6edfcfce9b37",
+        "image_ids": [
+          "n02088632_819",
+          "n02088632_982"
+        ],
+        "splits": [
+          "test",
+          "val"
+        ],
+        "breed_keys": [
+          "bluetick"
+        ],
+        "cross_split": true,
+        "cross_class": false
+      },
+      {
+        "sha256": "a848d93ea666a4cd6b219f1e3ec70aff68763adcec4fdb646a42733b40df333e",
+        "image_ids": [
+          "n02102177_1999",
+          "n02102177_2388"
+        ],
+        "splits": [
+          "test"
+        ],
+        "breed_keys": [
+          "welsh_springer_spaniel"
+        ],
+        "cross_split": false,
+        "cross_class": false
+      },
+      {
+        "sha256": "a9abeea1d94ba152f7557451d1684880d04ee42bc0949f8218d73220c7f88f2b",
+        "image_ids": [
+          "n02093256_4090",
+          "n02093428_5635"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "american_staffordshire_terrier",
+          "staffordshire_bullterrier"
+        ],
+        "cross_split": false,
+        "cross_class": true
+      },
+      {
+        "sha256": "ada42a2fa9fa8eb4b7a92b13ac8a7d20ad824a639a33efb68778ffe466d7ffa9",
+        "image_ids": [
+          "n02088632_4360",
+          "n02088632_600"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "bluetick"
+        ],
+        "cross_split": false,
+        "cross_class": false
+      },
+      {
+        "sha256": "af5c6bd817835855b140c015bbfe08536ea3f799307c6b90b928b8ccbd8f6ebf",
+        "image_ids": [
+          "n02115913_1142",
+          "n02115913_2029"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "dhole"
+        ],
+        "cross_split": false,
+        "cross_class": false
+      },
+      {
+        "sha256": "b2d9a954b1e9299402924ea5a386d630a892c2ee8bf0fe63ca8e2023f085b536",
+        "image_ids": [
+          "n02106030_15829",
+          "n02106166_6512"
+        ],
+        "splits": [
+          "test",
+          "train"
+        ],
+        "breed_keys": [
+          "border_collie",
+          "collie"
+        ],
+        "cross_split": true,
+        "cross_class": true
+      },
+      {
+        "sha256": "bafccc45fd529ec379d42bbb6b06944620f96d849dcc7826af35e01565738f2d",
+        "image_ids": [
+          "n02106030_2522",
+          "n02106166_1031"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "border_collie",
+          "collie"
+        ],
+        "cross_split": false,
+        "cross_class": true
+      },
+      {
+        "sha256": "be2f6ae4e654e1aebb2a561030ccecbd1bd74bb98075a1ed6f98c4888eb93c49",
+        "image_ids": [
+          "n02113186_1030",
+          "n02113186_11400"
+        ],
+        "splits": [
+          "test",
+          "train"
+        ],
+        "breed_keys": [
+          "cardigan"
+        ],
+        "cross_split": true,
+        "cross_class": false
+      },
+      {
+        "sha256": "be9786e885e0fa725e38908ff2de230d82106332c5573f2ed9f83fc75a9f9b13",
+        "image_ids": [
+          "n02095889_3354",
+          "n02095889_6458"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "sealyham_terrier"
+        ],
+        "cross_split": false,
+        "cross_class": false
+      },
+      {
+        "sha256": "bf32fb3158de077ada30e0873ff2aa783168b1741fe059c20c1f76c6f1131e4e",
+        "image_ids": [
+          "n02093256_5988",
+          "n02093428_1378"
+        ],
+        "splits": [
+          "test",
+          "train"
+        ],
+        "breed_keys": [
+          "american_staffordshire_terrier",
+          "staffordshire_bullterrier"
+        ],
+        "cross_split": true,
+        "cross_class": true
+      },
+      {
+        "sha256": "c4372c8294e47978ff574a6b85b2bef89fd2fddc841205cac8f03789fbaa59e3",
+        "image_ids": [
+          "n02102973_1615",
+          "n02102973_1714"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "irish_water_spaniel"
+        ],
+        "cross_split": false,
+        "cross_class": false
+      },
+      {
+        "sha256": "ca475a28761dc20faf816b530ea1d4a72c86e774bb26100841bd574d1f83e50a",
+        "image_ids": [
+          "n02112706_1833",
+          "n02112706_2074"
+        ],
+        "splits": [
+          "test",
+          "train"
+        ],
+        "breed_keys": [
+          "brabancon_griffon"
+        ],
+        "cross_split": true,
+        "cross_class": false
+      },
+      {
+        "sha256": "d34fc12e1a3e607c7c63e5b70442fd84a197d55c76949261206517a57b7e2d58",
+        "image_ids": [
+          "n02112706_1202",
+          "n02112706_2161"
+        ],
+        "splits": [
+          "test",
+          "train"
+        ],
+        "breed_keys": [
+          "brabancon_griffon"
+        ],
+        "cross_split": true,
+        "cross_class": false
+      },
+      {
+        "sha256": "daf9e0aef36e233fc7f9ad614604b53687acc02cb4f4218dccbf0d404df578b0",
+        "image_ids": [
+          "n02104365_9552",
+          "n02105056_2194"
+        ],
+        "splits": [
+          "test",
+          "train"
+        ],
+        "breed_keys": [
+          "groenendael",
+          "schipperke"
+        ],
+        "cross_split": true,
+        "cross_class": true
+      },
+      {
+        "sha256": "dc3bbbfcf4976529622210b101145d39699990be6f191911bb4634068240df85",
+        "image_ids": [
+          "n02095314_2754",
+          "n02095570_3101"
+        ],
+        "splits": [
+          "test",
+          "train"
+        ],
+        "breed_keys": [
+          "lakeland_terrier",
+          "wire-haired_fox_terrier"
+        ],
+        "cross_split": true,
+        "cross_class": true
+      },
+      {
+        "sha256": "dd55069f26776977a31bd540612398dc3eb48a6bf49269ce845b1581a0b31cb0",
+        "image_ids": [
+          "n02107683_71",
+          "n02107908_47"
+        ],
+        "splits": [
+          "test",
+          "train"
+        ],
+        "breed_keys": [
+          "appenzeller",
+          "bernese_mountain_dog"
+        ],
+        "cross_split": true,
+        "cross_class": true
+      },
+      {
+        "sha256": "e5624227c4cb1eda9d0f08cd79f089ebc2ae6af1094b0562ca6a48a020617ea7",
+        "image_ids": [
+          "n02085782_381",
+          "n02102040_639"
+        ],
+        "splits": [
+          "test"
+        ],
+        "breed_keys": [
+          "english_springer",
+          "japanese_spaniel"
+        ],
+        "cross_split": false,
+        "cross_class": true
+      },
+      {
+        "sha256": "ed834c120ea44a6636597b287c2d26fda5dbe274ba488c89f70484eb75f9180a",
+        "image_ids": [
+          "n02113978_3178",
+          "n02113978_530"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "mexican_hairless"
+        ],
+        "cross_split": false,
+        "cross_class": false
+      },
+      {
+        "sha256": "f321780c1756e26b88b0f85f27d8fb2cc5c01c8235686d0eb861eb6f67b846fa",
+        "image_ids": [
+          "n02109961_2317",
+          "n02110185_1614"
+        ],
+        "splits": [
+          "test"
+        ],
+        "breed_keys": [
+          "eskimo_dog",
+          "siberian_husky"
+        ],
+        "cross_split": false,
+        "cross_class": true
+      },
+      {
+        "sha256": "f3b87fcfa1b7fbcef4da72f984ee6ee6a5ca07593e157f292013f3a956101f46",
+        "image_ids": [
+          "n02097658_4201",
+          "n02097658_8018"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "silky_terrier"
+        ],
+        "cross_split": false,
+        "cross_class": false
+      },
+      {
+        "sha256": "f3b9fb979ae5abf7b384e59286966ee76fb19fbf132911529ee85edf66c4c695",
+        "image_ids": [
+          "n02097047_951",
+          "n02097209_583"
+        ],
+        "splits": [
+          "val"
+        ],
+        "breed_keys": [
+          "miniature_schnauzer",
+          "standard_schnauzer"
+        ],
+        "cross_split": false,
+        "cross_class": true
+      },
+      {
+        "sha256": "f3da2120773a6ccfc641464e0fcd1a66c97aca79e2e77241ad74be339a3539c9",
+        "image_ids": [
+          "n02092002_2448",
+          "n02092002_6503"
+        ],
+        "splits": [
+          "train"
+        ],
+        "breed_keys": [
+          "scottish_deerhound"
+        ],
+        "cross_split": false,
+        "cross_class": false
+      },
+      {
+        "sha256": "f70ab11b957670fbad6b9b4b72df9daee95842e49714cad4b0336c61f313cba3",
+        "image_ids": [
+          "n02112706_1568",
+          "n02112706_539"
+        ],
+        "splits": [
+          "test",
+          "val"
+        ],
+        "breed_keys": [
+          "brabancon_griffon"
+        ],
+        "cross_split": true,
+        "cross_class": false
+      },
+      {
+        "sha256": "f97183aa8d0a6fe62cd14dcec4c13e47573b13bb7b160c1dcbfaecbcf713d3a1",
+        "image_ids": [
+          "n02101556_5512",
+          "n02101556_5903"
+        ],
+        "splits": [
+          "test",
+          "train"
+        ],
+        "breed_keys": [
+          "clumber"
+        ],
+        "cross_split": true,
+        "cross_class": false
+      }
+    ],
+    "group_count": 89,
+    "cross_split_groups": 37,
+    "cross_class_groups": 37,
+    "test_ids_with_train_or_val_duplicate": [
+      "n02086646_172",
+      "n02086646_280",
+      "n02086646_422",
+      "n02088632_819",
+      "n02090379_4667",
+      "n02091134_16337",
+      "n02091831_6323",
+      "n02092002_1767",
+      "n02093428_1378",
+      "n02093647_2585",
+      "n02093647_2687",
+      "n02093647_3277",
+      "n02094114_1020",
+      "n02095314_3509",
+      "n02095570_3101",
+      "n02095889_1582",
+      "n02095889_2471",
+      "n02101556_5903",
+      "n02102973_4469",
+      "n02104365_7953",
+      "n02104365_9552",
+      "n02105056_5700",
+      "n02106030_14811",
+      "n02106166_6512",
+      "n02107683_71",
+      "n02108000_2891",
+      "n02109525_7982",
+      "n02112706_1202",
+      "n02112706_1379",
+      "n02112706_1568",
+      "n02112706_1833",
+      "n02112706_2070",
+      "n02113186_1030",
+      "n02113712_1558",
+      "n02113978_3474",
+      "n02115641_2440",
+      "n02115913_750"
+    ],
+    "decision": "official test is not modified; duplicates inside official train are kept on one side of train/val; train/val copies of test images and label-conflict copies are removed from train/val (see 'leakage')",
+    "impact": "train/val<->test copies leak test images into training (optimistic test metrics); cross-class copies are label conflicts that cap achievable accuracy. Evaluation should additionally report test metrics without the listed test ids."
+  },
+  "leakage": {
+    "policy": "remove from train/val every record whose exact content (sha256) also occurs in official test, and every record whose content occurs with another breed label; official test is never modified, its records are flagged instead",
+    "applied_after_validation_split": true,
+    "removed_total": 67,
+    "removed_by_reason": {
+      "dup_with_test": 23,
+      "dup_with_test+label_conflict": 14,
+      "label_conflict": 30
+    },
+    "removed_by_split": {
+      "train": 53,
+      "val": 14
+    },
+    "removed_by_class": {
+      "american_staffordshire_terrier": 1,
+      "appenzeller": 2,
+      "bedlington_terrier": 3,
+      "bernese_mountain_dog": 1,
+      "blenheim_spaniel": 1,
+      "bloodhound": 1,
+      "bluetick": 1,
+      "border_collie": 4,
+      "brabancon_griffon": 5,
+      "briard": 1,
+      "cardigan": 1,
+      "clumber": 1,
+      "collie": 4,
+      "dhole": 2,
+      "entlebucher": 1,
+      "eskimo_dog": 1,
+      "groenendael": 2,
+      "irish_terrier": 1,
+      "irish_water_spaniel": 1,
+      "japanese_spaniel": 2,
+      "lakeland_terrier": 3,
+      "mexican_hairless": 1,
+      "miniature_poodle": 3,
+      "miniature_schnauzer": 1,
+      "norfolk_terrier": 1,
+      "norwich_terrier": 2,
+      "redbone": 2,
+      "saint_bernard": 1,
+      "saluki": 1,
+      "schipperke": 1,
+      "scottish_deerhound": 1,
+      "sealyham_terrier": 1,
+      "siberian_husky": 1,
+      "soft-coated_wheaten_terrier": 1,
+      "staffordshire_bullterrier": 2,
+      "standard_poodle": 1,
+      "standard_schnauzer": 1,
+      "tibetan_terrier": 1,
+      "toy_poodle": 3,
+      "wire-haired_fox_terrier": 3
+    },
+    "test_flagged_dup_with_test": [
+      "n02086646_172",
+      "n02086646_280",
+      "n02086646_422",
+      "n02088632_819",
+      "n02090379_4667",
+      "n02091134_16337",
+      "n02091831_6323",
+      "n02092002_1767",
+      "n02093428_1378",
+      "n02093647_2585",
+      "n02093647_2687",
+      "n02093647_3277",
+      "n02094114_1020",
+      "n02095314_3509",
+      "n02095570_3101",
+      "n02095889_1582",
+      "n02095889_2471",
+      "n02101556_5903",
+      "n02102973_4469",
+      "n02104365_7953",
+      "n02104365_9552",
+      "n02105056_5700",
+      "n02106030_14811",
+      "n02106166_6512",
+      "n02107683_71",
+      "n02108000_2891",
+      "n02109525_7982",
+      "n02112706_1202",
+      "n02112706_1379",
+      "n02112706_1568",
+      "n02112706_1833",
+      "n02112706_2070",
+      "n02113186_1030",
+      "n02113712_1558",
+      "n02113978_3474",
+      "n02115641_2440",
+      "n02115913_750"
+    ],
+    "flagged_label_conflict_kept": [
+      "n02085782_381",
+      "n02085782_50",
+      "n02086240_3921",
+      "n02086646_172",
+      "n02086646_280",
+      "n02086910_103",
+      "n02091134_16337",
+      "n02093256_6177",
+      "n02093428_1378",
+      "n02093428_8454",
+      "n02094114_1020",
+      "n02095314_3509",
+      "n02095570_3101",
+      "n02095889_1582",
+      "n02097130_857",
+      "n02097209_585",
+      "n02097298_2083",
+      "n02097474_7300",
+      "n02098286_830",
+      "n02102040_639",
+      "n02104365_9552",
+      "n02106030_14811",
+      "n02106030_16338",
+      "n02106166_6512",
+      "n02106166_6710",
+      "n02107683_71",
+      "n02109961_2317",
+      "n02110185_1614",
+      "n02113712_1558",
+      "n02115641_2440"
+    ],
+    "group_breakdown": {
+      "cross_split_and_cross_class": 14,
+      "cross_split_only": 23,
+      "cross_class_only": 23,
+      "neither": 29
+    }
+  },
+  "limitations": [
+    "Stanford Dogs is built from ImageNet images and the backbone is initialised with ImageNet-1k weights, which may have seen some official test images; test metrics are optimistic and not an independent external evaluation.",
+    "Largest-box policy: in multi-dog frames the crop may contain other dogs or, with noisy annotations, a dog of another breed (see reports/dataset_visual_check.md).",
+    "Label-conflict copies remain inside the untouched official test (flag label_conflict)."
+  ],
+  "coordinate_convention": {
+    "source_xml": "origin (0,0) = top-left pixel of the stored image (no EXIF rotation); xmin/ymin/xmax/ymax are inclusive 0-based pixel indices",
+    "project": "(xmin, ymin, xmax, ymax) with exclusive xmax/ymax, matching PIL.Image.crop",
+    "conversion": "(xmin, ymin, xmax + 1, ymax + 1)",
+    "out_of_bounds": "clipped to the image and reported per record as 'bbox_clipped'",
+    "exif": "boxes refer to stored pixels; records with EXIF orientation 2..8 are excluded and reported (training images are not EXIF-transposed)"
+  },
+  "crop_policy": {
+    "box_selection": "largest valid box by area; ties -> earliest <object> in XML order",
+    "context": 0.1,
+    "manifest_bbox": "normalized original box (no context); context is applied on the fly",
+    "min_size": "no minimum size for dataset boxes (upload ROI limits do not apply)"
+  },
+  "validation_split": {
+    "source": "official train only",
+    "method": "sklearn.model_selection.train_test_split(stratify=class_id, shuffle=True) over one representative per exact-duplicate group (smallest image_id), sorted; other group members follow their representative",
+    "duplicate_policy": "exact duplicates inside official train never straddle train/val",
+    "val_fraction": 0.2,
+    "seed": 42
+  },
+  "visual_check": {
+    "status": "generated; manual review result recorded separately",
+    "review_record": "reports/dataset_visual_check.md",
+    "gallery_dir": "data/prepared/visual_check",
+    "panels": 26,
+    "legend": "red = normalized bbox, green = bbox + context, right = final crop",
+    "samples": [
+      {
+        "file": "01_bbox_clipped_n02098105_2063.jpg",
+        "image_id": "n02098105_2063",
+        "category": "bbox_clipped",
+        "breed_key": "soft-coated_wheaten_terrier",
+        "bbox": [
+          92,
+          42,
+          500,
+          329
+        ],
+        "context_box": [
+          51,
+          13,
+          500,
+          358
+        ]
+      },
+      {
+        "file": "02_bbox_clipped_n02106030_3948.jpg",
+        "image_id": "n02106030_3948",
+        "category": "bbox_clipped",
+        "breed_key": "collie",
+        "bbox": [
+          10,
+          10,
+          284,
+          360
+        ],
+        "context_box": [
+          0,
+          0,
+          284,
+          360
+        ]
+      },
+      {
+        "file": "03_full_image_box_n02085782_518.jpg",
+        "image_id": "n02085782_518",
+        "category": "full_image_box",
+        "breed_key": "japanese_spaniel",
+        "bbox": [
+          0,
+          0,
+          120,
+          120
+        ],
+        "context_box": [
+          0,
+          0,
+          120,
+          120
+        ]
+      },
+      {
+        "file": "04_touches_left_top_n02085620_4266.jpg",
+        "image_id": "n02085620_4266",
+        "category": "touches_left_top",
+        "breed_key": "chihuahua",
+        "bbox": [
+          0,
+          0,
+          286,
+          375
+        ],
+        "context_box": [
+          0,
+          0,
+          315,
+          375
+        ]
+      },
+      {
+        "file": "05_touches_right_n02085620_1569.jpg",
+        "image_id": "n02085620_1569",
+        "category": "touches_right",
+        "breed_key": "chihuahua",
+        "bbox": [
+          24,
+          10,
+          278,
+          274
+        ],
+        "context_box": [
+          0,
+          0,
+          278,
+          274
+        ]
+      },
+      {
+        "file": "06_touches_bottom_n02085620_11238.jpg",
+        "image_id": "n02085620_11238",
+        "category": "touches_bottom",
+        "breed_key": "chihuahua",
+        "bbox": [
+          39,
+          191,
+          146,
+          384
+        ],
+        "context_box": [
+          28,
+          171,
+          157,
+          384
+        ]
+      },
+      {
+        "file": "07_multiple_objects_n02106030_18950.jpg",
+        "image_id": "n02106030_18950",
+        "category": "multiple_objects",
+        "breed_key": "collie",
+        "bbox": [
+          60,
+          105,
+          237,
+          301
+        ],
+        "context_box": [
+          42,
+          85,
+          255,
+          321
+        ]
+      },
+      {
+        "file": "08_multiple_objects_n02099601_7588.jpg",
+        "image_id": "n02099601_7588",
+        "category": "multiple_objects",
+        "breed_key": "golden_retriever",
+        "bbox": [
+          169,
+          45,
+          350,
+          168
+        ],
+        "context_box": [
+          150,
+          32,
+          350,
+          181
+        ]
+      },
+      {
+        "file": "09_multiple_objects_n02115913_3107.jpg",
+        "image_id": "n02115913_3107",
+        "category": "multiple_objects",
+        "breed_key": "dhole",
+        "bbox": [
+          71,
+          66,
+          253,
+          235
+        ],
+        "context_box": [
+          52,
+          49,
+          272,
+          252
+        ]
+      },
+      {
+        "file": "10_non_jpeg_content_n02105855_2933.jpg",
+        "image_id": "n02105855_2933",
+        "category": "non_jpeg_content",
+        "breed_key": "shetland_sheepdog",
+        "bbox": [
+          0,
+          1,
+          203,
+          177
+        ],
+        "context_box": [
+          0,
+          0,
+          213,
+          189
+        ]
+      },
+      {
+        "file": "11_exif_orientation_tag_n02091635_1808.jpg",
+        "image_id": "n02091635_1808",
+        "category": "exif_orientation_tag",
+        "breed_key": "otterhound",
+        "bbox": [
+          26,
+          11,
+          200,
+          224
+        ],
+        "context_box": [
+          8,
+          0,
+          200,
+          225
+        ]
+      },
+      {
+        "file": "12_exif_orientation_tag_n02089973_1000.jpg",
+        "image_id": "n02089973_1000",
+        "category": "exif_orientation_tag",
+        "breed_key": "english_foxhound",
+        "bbox": [
+          4,
+          72,
+          72,
+          144
+        ],
+        "context_box": [
+          0,
+          64,
+          79,
+          150
+        ]
+      },
+      {
+        "file": "13_small_bbox_n02109961_4182.jpg",
+        "image_id": "n02109961_4182",
+        "category": "small_bbox",
+        "breed_key": "eskimo_dog",
+        "bbox": [
+          248,
+          185,
+          281,
+          238
+        ],
+        "context_box": [
+          244,
+          179,
+          285,
+          244
+        ]
+      },
+      {
+        "file": "14_small_bbox_n02111277_1628.jpg",
+        "image_id": "n02111277_1628",
+        "category": "small_bbox",
+        "breed_key": "newfoundland",
+        "bbox": [
+          146,
+          214,
+          194,
+          253
+        ],
+        "context_box": [
+          141,
+          210,
+          199,
+          257
+        ]
+      },
+      {
+        "file": "15_random_breed_n02088364_12710.jpg",
+        "image_id": "n02088364_12710",
+        "category": "random_breed",
+        "breed_key": "beagle",
+        "bbox": [
+          2,
+          88,
+          120,
+          240
+        ],
+        "context_box": [
+          0,
+          72,
+          132,
+          240
+        ]
+      },
+      {
+        "file": "16_random_breed_n02086910_6475.jpg",
+        "image_id": "n02086910_6475",
+        "category": "random_breed",
+        "breed_key": "papillon",
+        "bbox": [
+          26,
+          26,
+          215,
+          243
+        ],
+        "context_box": [
+          7,
+          4,
+          234,
+          254
+        ]
+      },
+      {
+        "file": "17_random_breed_n02104365_8919.jpg",
+        "image_id": "n02104365_8919",
+        "category": "random_breed",
+        "breed_key": "schipperke",
+        "bbox": [
+          65,
+          57,
+          266,
+          464
+        ],
+        "context_box": [
+          44,
+          16,
+          287,
+          500
+        ]
+      },
+      {
+        "file": "18_random_breed_n02092339_2239.jpg",
+        "image_id": "n02092339_2239",
+        "category": "random_breed",
+        "breed_key": "weimaraner",
+        "bbox": [
+          1,
+          177,
+          303,
+          499
+        ],
+        "context_box": [
+          0,
+          144,
+          334,
+          500
+        ]
+      },
+      {
+        "file": "19_random_breed_n02109525_10743.jpg",
+        "image_id": "n02109525_10743",
+        "category": "random_breed",
+        "breed_key": "saint_bernard",
+        "bbox": [
+          283,
+          44,
+          491,
+          267
+        ],
+        "context_box": [
+          262,
+          21,
+          500,
+          290
+        ]
+      },
+      {
+        "file": "20_random_breed_n02112137_126.jpg",
+        "image_id": "n02112137_126",
+        "category": "random_breed",
+        "breed_key": "chow",
+        "bbox": [
+          157,
+          49,
+          382,
+          375
+        ],
+        "context_box": [
+          134,
+          16,
+          405,
+          375
+        ]
+      },
+      {
+        "file": "21_random_breed_n02091831_1512.jpg",
+        "image_id": "n02091831_1512",
+        "category": "random_breed",
+        "breed_key": "saluki",
+        "bbox": [
+          0,
+          16,
+          364,
+          307
+        ],
+        "context_box": [
+          0,
+          0,
+          401,
+          307
+        ]
+      },
+      {
+        "file": "22_random_breed_n02112018_5864.jpg",
+        "image_id": "n02112018_5864",
+        "category": "random_breed",
+        "breed_key": "pomeranian",
+        "bbox": [
+          11,
+          38,
+          472,
+          375
+        ],
+        "context_box": [
+          0,
+          4,
+          500,
+          375
+        ]
+      },
+      {
+        "file": "23_random_breed_n02097298_2500.jpg",
+        "image_id": "n02097298_2500",
+        "category": "random_breed",
+        "breed_key": "scotch_terrier",
+        "bbox": [
+          70,
+          71,
+          305,
+          333
+        ],
+        "context_box": [
+          46,
+          44,
+          329,
+          333
+        ]
+      },
+      {
+        "file": "24_random_breed_n02097474_889.jpg",
+        "image_id": "n02097474_889",
+        "category": "random_breed",
+        "breed_key": "tibetan_terrier",
+        "bbox": [
+          11,
+          89,
+          444,
+          347
+        ],
+        "context_box": [
+          0,
+          63,
+          488,
+          373
+        ]
+      },
+      {
+        "file": "25_random_breed_n02100236_4755.jpg",
+        "image_id": "n02100236_4755",
+        "category": "random_breed",
+        "breed_key": "german_short-haired_pointer",
+        "bbox": [
+          13,
+          18,
+          433,
+          299
+        ],
+        "context_box": [
+          0,
+          0,
+          448,
+          311
+        ]
+      },
+      {
+        "file": "26_random_breed_n02094114_550.jpg",
+        "image_id": "n02094114_550",
+        "category": "random_breed",
+        "breed_key": "norfolk_terrier",
+        "bbox": [
+          111,
+          138,
+          332,
+          499
+        ],
+        "context_box": [
+          88,
+          101,
+          333,
+          500
+        ]
+      }
+    ]
+  }
+}

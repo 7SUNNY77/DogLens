@@ -1,0 +1,11 @@
+[server]
+# Slightly above the 10 MiB project limit so that image_io reports oversize files in Russian.
+maxUploadSize = 11
+headless = true
+
+[browser]
+gatherUsageStats = false
+
+[client]
+# Hide developer menu items such as "Deploy" for end users.
+toolbarMode = "viewer"

@@ -1,0 +1,57 @@
+# Environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+build/
+dist/
+
+# Datasets (Stanford Dogs is distributed separately; do not commit images, archives, .mat lists
+# or visual-check renders). Only small derived metadata without image content is tracked:
+# the manifest (fixed split), the class mapping, the preparation report and split provenance.
+data/*
+!data/prepared/
+data/prepared/*
+!data/prepared/manifest.csv
+!data/prepared/class_mapping.json
+!data/prepared/excluded.csv
+!data/prepared/preparation_report.json
+!data/splits/
+data/splits/*
+!data/splits/SOURCE.json
+!data/weights/
+data/weights/*
+!data/weights/SOURCE.json
+
+# Model weights and checkpoints (distributed separately)
+artifacts/**/*.pt
+artifacts/**/*.pth
+artifacts/checkpoints/
+artifacts/smoke/
+artifacts/runs/
+runs/
+*.ckpt
+
+# SQLite feedback DB and user files
+*.sqlite
+*.sqlite3
+*.db
+uploads/
+
+# Secrets
+.env
+.env.*
+.streamlit/secrets.toml
+secrets/
+reports/evaluation/**/logits.npz
+reports/external_check/
+
+# Local release archives (published only as GitHub Release assets)
+dist/
+
+# The trained bundle is delivered as a release archive (scripts/package_bundle.py), never via Git
+artifacts/model_bundle/

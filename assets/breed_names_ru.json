@@ -1,0 +1,5 @@
+{
+  "schema_version": 1,
+  "_comment": "Verified Russian breed names keyed by breed_key from class_mapping.json. Add an entry only with a checkable 'source' (e.g. an RKF/FCI breed standard page). Missing entries fall back to the English name.",
+  "names": {}
+}

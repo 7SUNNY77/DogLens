@@ -1,0 +1,95 @@
+{
+  "generated_at_utc": "2026-10-13T17:44:17Z",
+  "command": "scripts/train.py --benchmark --benchmark-batches 8 --benchmark-warmup 2",
+  "environment": {
+    "python": "3.11.15",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "torch": "2.14.1+cpu",
+    "torchvision": "0.29.1+cpu",
+    "device": "cpu",
+    "torch_num_threads": 16
+  },
+  "batch_size": 16,
+  "num_workers": 0,
+  "warmup_batches": 2,
+  "timed_batches": 8,
+  "train_records": 9551,
+  "val_records": 2382,
+  "train_batches_per_epoch": 597,
+  "val_batches_per_epoch": 149,
+  "trainable_params": {
+    "stage_a": 153720,
+    "stage_b": 3309460
+  },
+  "median_seconds_per_batch": {
+    "train_load": 0.293520900000658,
+    "val_load": 0.35561890000008134,
+    "stage_a_step": 0.2119822500008013,
+    "stage_b_step": 0.3537103000007846,
+    "val_forward": 0.19333450000067387
+  },
+  "raw_seconds": {
+    "train_load": [
+      0.2262442999999621,
+      0.2884682000003522,
+      0.274952800000392,
+      0.3171018000011827,
+      0.3131993999995757,
+      0.2626479999998992,
+      0.2985736000009638,
+      0.3092230999991443
+    ],
+    "val_load": [
+      0.3527797999995528,
+      0.2646011999986513,
+      0.28204100000039034,
+      0.2776286999996955,
+      0.4523232999999891,
+      0.43189390000043204,
+      0.3584580000006099,
+      0.376106499999878
+    ],
+    "stage_a_step": [
+      0.28984110000055807,
+      0.18984770000133722,
+      0.18597150000096008,
+      0.24157869999908144,
+      0.18644289999974717,
+      0.20403360000091197,
+      0.23328510000101232,
+      0.2199309000006906
+    ],
+    "stage_b_step": [
+      0.38741420000042126,
+      0.4227191000009043,
+      0.3915606000009575,
+      0.3591255999999703,
+      0.34829500000159896,
+      0.3350644000001921,
+      0.2943672000001243,
+      0.3329448999993474
+    ],
+    "val_forward": [
+      0.2335294000004069,
+      0.21630180000101973,
+      0.17240300000048592,
+      0.16320949999862933,
+      0.1976001000002725,
+      0.18906890000107524,
+      0.16208519999963755,
+      0.24495030000070983
+    ]
+  },
+  "estimate_minutes": {
+    "stage_a_epoch": 6.392990619183062,
+    "stage_b_epoch": 7.803184716682896,
+    "validation_pass": 1.3632342766685421,
+    "full_experiment_max_epochs": 58.19489544096367,
+    "epochs": {
+      "stage_a": 3,
+      "stage_b": 5
+    },
+    "basis": "medians of timed batches after warm-up; serial loading (num_workers=0); upper bound without early stopping; excludes checkpoint I/O (~seconds/epoch)"
+  },
+  "performance_settings": "unchanged defaults (torch threads as reported, num_workers=0)"
+}

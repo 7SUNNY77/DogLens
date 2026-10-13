@@ -1,0 +1,728 @@
+{
+  "schema_version": 1,
+  "generated_from": "class_mapping.json (dataset preparation)",
+  "mapping_sha256": "d9779c772bfe36c56de40cdcaf7c61e8be334ba2a1407828cb5e2c8b0a9c3c5f",
+  "name_ru_policy": "name_ru is null unless a verified translation is listed in assets/breed_names_ru.json; the UI then shows name_en",
+  "breeds": [
+    {
+      "class_id": 0,
+      "breed_key": "chihuahua",
+      "name_en": "Chihuahua",
+      "name_ru": null
+    },
+    {
+      "class_id": 1,
+      "breed_key": "japanese_spaniel",
+      "name_en": "Japanese spaniel",
+      "name_ru": null
+    },
+    {
+      "class_id": 2,
+      "breed_key": "maltese_dog",
+      "name_en": "Maltese dog",
+      "name_ru": null
+    },
+    {
+      "class_id": 3,
+      "breed_key": "pekinese",
+      "name_en": "Pekinese",
+      "name_ru": null
+    },
+    {
+      "class_id": 4,
+      "breed_key": "shih-tzu",
+      "name_en": "Shih-Tzu",
+      "name_ru": null
+    },
+    {
+      "class_id": 5,
+      "breed_key": "blenheim_spaniel",
+      "name_en": "Blenheim spaniel",
+      "name_ru": null
+    },
+    {
+      "class_id": 6,
+      "breed_key": "papillon",
+      "name_en": "Papillon",
+      "name_ru": null
+    },
+    {
+      "class_id": 7,
+      "breed_key": "toy_terrier",
+      "name_en": "Toy terrier",
+      "name_ru": null
+    },
+    {
+      "class_id": 8,
+      "breed_key": "rhodesian_ridgeback",
+      "name_en": "Rhodesian ridgeback",
+      "name_ru": null
+    },
+    {
+      "class_id": 9,
+      "breed_key": "afghan_hound",
+      "name_en": "Afghan hound",
+      "name_ru": null
+    },
+    {
+      "class_id": 10,
+      "breed_key": "basset",
+      "name_en": "Basset",
+      "name_ru": null
+    },
+    {
+      "class_id": 11,
+      "breed_key": "beagle",
+      "name_en": "Beagle",
+      "name_ru": null
+    },
+    {
+      "class_id": 12,
+      "breed_key": "bloodhound",
+      "name_en": "Bloodhound",
+      "name_ru": null
+    },
+    {
+      "class_id": 13,
+      "breed_key": "bluetick",
+      "name_en": "Bluetick",
+      "name_ru": null
+    },
+    {
+      "class_id": 14,
+      "breed_key": "black-and-tan_coonhound",
+      "name_en": "Black-and-tan coonhound",
+      "name_ru": null
+    },
+    {
+      "class_id": 15,
+      "breed_key": "walker_hound",
+      "name_en": "Walker hound",
+      "name_ru": null
+    },
+    {
+      "class_id": 16,
+      "breed_key": "english_foxhound",
+      "name_en": "English foxhound",
+      "name_ru": null
+    },
+    {
+      "class_id": 17,
+      "breed_key": "redbone",
+      "name_en": "Redbone",
+      "name_ru": null
+    },
+    {
+      "class_id": 18,
+      "breed_key": "borzoi",
+      "name_en": "Borzoi",
+      "name_ru": null
+    },
+    {
+      "class_id": 19,
+      "breed_key": "irish_wolfhound",
+      "name_en": "Irish wolfhound",
+      "name_ru": null
+    },
+    {
+      "class_id": 20,
+      "breed_key": "italian_greyhound",
+      "name_en": "Italian greyhound",
+      "name_ru": null
+    },
+    {
+      "class_id": 21,
+      "breed_key": "whippet",
+      "name_en": "Whippet",
+      "name_ru": null
+    },
+    {
+      "class_id": 22,
+      "breed_key": "ibizan_hound",
+      "name_en": "Ibizan hound",
+      "name_ru": null
+    },
+    {
+      "class_id": 23,
+      "breed_key": "norwegian_elkhound",
+      "name_en": "Norwegian elkhound",
+      "name_ru": null
+    },
+    {
+      "class_id": 24,
+      "breed_key": "otterhound",
+      "name_en": "Otterhound",
+      "name_ru": null
+    },
+    {
+      "class_id": 25,
+      "breed_key": "saluki",
+      "name_en": "Saluki",
+      "name_ru": null
+    },
+    {
+      "class_id": 26,
+      "breed_key": "scottish_deerhound",
+      "name_en": "Scottish deerhound",
+      "name_ru": null
+    },
+    {
+      "class_id": 27,
+      "breed_key": "weimaraner",
+      "name_en": "Weimaraner",
+      "name_ru": null
+    },
+    {
+      "class_id": 28,
+      "breed_key": "staffordshire_bullterrier",
+      "name_en": "Staffordshire bullterrier",
+      "name_ru": null
+    },
+    {
+      "class_id": 29,
+      "breed_key": "american_staffordshire_terrier",
+      "name_en": "American Staffordshire terrier",
+      "name_ru": null
+    },
+    {
+      "class_id": 30,
+      "breed_key": "bedlington_terrier",
+      "name_en": "Bedlington terrier",
+      "name_ru": null
+    },
+    {
+      "class_id": 31,
+      "breed_key": "border_terrier",
+      "name_en": "Border terrier",
+      "name_ru": null
+    },
+    {
+      "class_id": 32,
+      "breed_key": "kerry_blue_terrier",
+      "name_en": "Kerry blue terrier",
+      "name_ru": null
+    },
+    {
+      "class_id": 33,
+      "breed_key": "irish_terrier",
+      "name_en": "Irish terrier",
+      "name_ru": null
+    },
+    {
+      "class_id": 34,
+      "breed_key": "norfolk_terrier",
+      "name_en": "Norfolk terrier",
+      "name_ru": null
+    },
+    {
+      "class_id": 35,
+      "breed_key": "norwich_terrier",
+      "name_en": "Norwich terrier",
+      "name_ru": null
+    },
+    {
+      "class_id": 36,
+      "breed_key": "yorkshire_terrier",
+      "name_en": "Yorkshire terrier",
+      "name_ru": null
+    },
+    {
+      "class_id": 37,
+      "breed_key": "wire-haired_fox_terrier",
+      "name_en": "Wire-haired fox terrier",
+      "name_ru": null
+    },
+    {
+      "class_id": 38,
+      "breed_key": "lakeland_terrier",
+      "name_en": "Lakeland terrier",
+      "name_ru": null
+    },
+    {
+      "class_id": 39,
+      "breed_key": "sealyham_terrier",
+      "name_en": "Sealyham terrier",
+      "name_ru": null
+    },
+    {
+      "class_id": 40,
+      "breed_key": "airedale",
+      "name_en": "Airedale",
+      "name_ru": null
+    },
+    {
+      "class_id": 41,
+      "breed_key": "cairn",
+      "name_en": "Cairn",
+      "name_ru": null
+    },
+    {
+      "class_id": 42,
+      "breed_key": "australian_terrier",
+      "name_en": "Australian terrier",
+      "name_ru": null
+    },
+    {
+      "class_id": 43,
+      "breed_key": "dandie_dinmont",
+      "name_en": "Dandie Dinmont",
+      "name_ru": null
+    },
+    {
+      "class_id": 44,
+      "breed_key": "boston_bull",
+      "name_en": "Boston bull",
+      "name_ru": null
+    },
+    {
+      "class_id": 45,
+      "breed_key": "miniature_schnauzer",
+      "name_en": "Miniature schnauzer",
+      "name_ru": null
+    },
+    {
+      "class_id": 46,
+      "breed_key": "giant_schnauzer",
+      "name_en": "Giant schnauzer",
+      "name_ru": null
+    },
+    {
+      "class_id": 47,
+      "breed_key": "standard_schnauzer",
+      "name_en": "Standard schnauzer",
+      "name_ru": null
+    },
+    {
+      "class_id": 48,
+      "breed_key": "scotch_terrier",
+      "name_en": "Scotch terrier",
+      "name_ru": null
+    },
+    {
+      "class_id": 49,
+      "breed_key": "tibetan_terrier",
+      "name_en": "Tibetan terrier",
+      "name_ru": null
+    },
+    {
+      "class_id": 50,
+      "breed_key": "silky_terrier",
+      "name_en": "Silky terrier",
+      "name_ru": null
+    },
+    {
+      "class_id": 51,
+      "breed_key": "soft-coated_wheaten_terrier",
+      "name_en": "Soft-coated wheaten terrier",
+      "name_ru": null
+    },
+    {
+      "class_id": 52,
+      "breed_key": "west_highland_white_terrier",
+      "name_en": "West Highland white terrier",
+      "name_ru": null
+    },
+    {
+      "class_id": 53,
+      "breed_key": "lhasa",
+      "name_en": "Lhasa",
+      "name_ru": null
+    },
+    {
+      "class_id": 54,
+      "breed_key": "flat-coated_retriever",
+      "name_en": "Flat-coated retriever",
+      "name_ru": null
+    },
+    {
+      "class_id": 55,
+      "breed_key": "curly-coated_retriever",
+      "name_en": "Curly-coated retriever",
+      "name_ru": null
+    },
+    {
+      "class_id": 56,
+      "breed_key": "golden_retriever",
+      "name_en": "Golden retriever",
+      "name_ru": null
+    },
+    {
+      "class_id": 57,
+      "breed_key": "labrador_retriever",
+      "name_en": "Labrador retriever",
+      "name_ru": null
+    },
+    {
+      "class_id": 58,
+      "breed_key": "chesapeake_bay_retriever",
+      "name_en": "Chesapeake Bay retriever",
+      "name_ru": null
+    },
+    {
+      "class_id": 59,
+      "breed_key": "german_short-haired_pointer",
+      "name_en": "German short-haired pointer",
+      "name_ru": null
+    },
+    {
+      "class_id": 60,
+      "breed_key": "vizsla",
+      "name_en": "Vizsla",
+      "name_ru": null
+    },
+    {
+      "class_id": 61,
+      "breed_key": "english_setter",
+      "name_en": "English setter",
+      "name_ru": null
+    },
+    {
+      "class_id": 62,
+      "breed_key": "irish_setter",
+      "name_en": "Irish setter",
+      "name_ru": null
+    },
+    {
+      "class_id": 63,
+      "breed_key": "gordon_setter",
+      "name_en": "Gordon setter",
+      "name_ru": null
+    },
+    {
+      "class_id": 64,
+      "breed_key": "brittany_spaniel",
+      "name_en": "Brittany spaniel",
+      "name_ru": null
+    },
+    {
+      "class_id": 65,
+      "breed_key": "clumber",
+      "name_en": "Clumber",
+      "name_ru": null
+    },
+    {
+      "class_id": 66,
+      "breed_key": "english_springer",
+      "name_en": "English springer",
+      "name_ru": null
+    },
+    {
+      "class_id": 67,
+      "breed_key": "welsh_springer_spaniel",
+      "name_en": "Welsh springer spaniel",
+      "name_ru": null
+    },
+    {
+      "class_id": 68,
+      "breed_key": "cocker_spaniel",
+      "name_en": "Cocker spaniel",
+      "name_ru": null
+    },
+    {
+      "class_id": 69,
+      "breed_key": "sussex_spaniel",
+      "name_en": "Sussex spaniel",
+      "name_ru": null
+    },
+    {
+      "class_id": 70,
+      "breed_key": "irish_water_spaniel",
+      "name_en": "Irish water spaniel",
+      "name_ru": null
+    },
+    {
+      "class_id": 71,
+      "breed_key": "kuvasz",
+      "name_en": "Kuvasz",
+      "name_ru": null
+    },
+    {
+      "class_id": 72,
+      "breed_key": "schipperke",
+      "name_en": "Schipperke",
+      "name_ru": null
+    },
+    {
+      "class_id": 73,
+      "breed_key": "groenendael",
+      "name_en": "Groenendael",
+      "name_ru": null
+    },
+    {
+      "class_id": 74,
+      "breed_key": "malinois",
+      "name_en": "Malinois",
+      "name_ru": null
+    },
+    {
+      "class_id": 75,
+      "breed_key": "briard",
+      "name_en": "Briard",
+      "name_ru": null
+    },
+    {
+      "class_id": 76,
+      "breed_key": "kelpie",
+      "name_en": "Kelpie",
+      "name_ru": null
+    },
+    {
+      "class_id": 77,
+      "breed_key": "komondor",
+      "name_en": "Komondor",
+      "name_ru": null
+    },
+    {
+      "class_id": 78,
+      "breed_key": "old_english_sheepdog",
+      "name_en": "Old English sheepdog",
+      "name_ru": null
+    },
+    {
+      "class_id": 79,
+      "breed_key": "shetland_sheepdog",
+      "name_en": "Shetland sheepdog",
+      "name_ru": null
+    },
+    {
+      "class_id": 80,
+      "breed_key": "collie",
+      "name_en": "Collie",
+      "name_ru": null
+    },
+    {
+      "class_id": 81,
+      "breed_key": "border_collie",
+      "name_en": "Border collie",
+      "name_ru": null
+    },
+    {
+      "class_id": 82,
+      "breed_key": "bouvier_des_flandres",
+      "name_en": "Bouvier des Flandres",
+      "name_ru": null
+    },
+    {
+      "class_id": 83,
+      "breed_key": "rottweiler",
+      "name_en": "Rottweiler",
+      "name_ru": null
+    },
+    {
+      "class_id": 84,
+      "breed_key": "german_shepherd",
+      "name_en": "German shepherd",
+      "name_ru": null
+    },
+    {
+      "class_id": 85,
+      "breed_key": "doberman",
+      "name_en": "Doberman",
+      "name_ru": null
+    },
+    {
+      "class_id": 86,
+      "breed_key": "miniature_pinscher",
+      "name_en": "Miniature pinscher",
+      "name_ru": null
+    },
+    {
+      "class_id": 87,
+      "breed_key": "greater_swiss_mountain_dog",
+      "name_en": "Greater Swiss Mountain dog",
+      "name_ru": null
+    },
+    {
+      "class_id": 88,
+      "breed_key": "bernese_mountain_dog",
+      "name_en": "Bernese mountain dog",
+      "name_ru": null
+    },
+    {
+      "class_id": 89,
+      "breed_key": "appenzeller",
+      "name_en": "Appenzeller",
+      "name_ru": null
+    },
+    {
+      "class_id": 90,
+      "breed_key": "entlebucher",
+      "name_en": "EntleBucher",
+      "name_ru": null
+    },
+    {
+      "class_id": 91,
+      "breed_key": "boxer",
+      "name_en": "Boxer",
+      "name_ru": null
+    },
+    {
+      "class_id": 92,
+      "breed_key": "bull_mastiff",
+      "name_en": "Bull mastiff",
+      "name_ru": null
+    },
+    {
+      "class_id": 93,
+      "breed_key": "tibetan_mastiff",
+      "name_en": "Tibetan mastiff",
+      "name_ru": null
+    },
+    {
+      "class_id": 94,
+      "breed_key": "french_bulldog",
+      "name_en": "French bulldog",
+      "name_ru": null
+    },
+    {
+      "class_id": 95,
+      "breed_key": "great_dane",
+      "name_en": "Great Dane",
+      "name_ru": null
+    },
+    {
+      "class_id": 96,
+      "breed_key": "saint_bernard",
+      "name_en": "Saint Bernard",
+      "name_ru": null
+    },
+    {
+      "class_id": 97,
+      "breed_key": "eskimo_dog",
+      "name_en": "Eskimo dog",
+      "name_ru": null
+    },
+    {
+      "class_id": 98,
+      "breed_key": "malamute",
+      "name_en": "Malamute",
+      "name_ru": null
+    },
+    {
+      "class_id": 99,
+      "breed_key": "siberian_husky",
+      "name_en": "Siberian husky",
+      "name_ru": null
+    },
+    {
+      "class_id": 100,
+      "breed_key": "affenpinscher",
+      "name_en": "Affenpinscher",
+      "name_ru": null
+    },
+    {
+      "class_id": 101,
+      "breed_key": "basenji",
+      "name_en": "Basenji",
+      "name_ru": null
+    },
+    {
+      "class_id": 102,
+      "breed_key": "pug",
+      "name_en": "Pug",
+      "name_ru": null
+    },
+    {
+      "class_id": 103,
+      "breed_key": "leonberg",
+      "name_en": "Leonberg",
+      "name_ru": null
+    },
+    {
+      "class_id": 104,
+      "breed_key": "newfoundland",
+      "name_en": "Newfoundland",
+      "name_ru": null
+    },
+    {
+      "class_id": 105,
+      "breed_key": "great_pyrenees",
+      "name_en": "Great Pyrenees",
+      "name_ru": null
+    },
+    {
+      "class_id": 106,
+      "breed_key": "samoyed",
+      "name_en": "Samoyed",
+      "name_ru": null
+    },
+    {
+      "class_id": 107,
+      "breed_key": "pomeranian",
+      "name_en": "Pomeranian",
+      "name_ru": null
+    },
+    {
+      "class_id": 108,
+      "breed_key": "chow",
+      "name_en": "Chow",
+      "name_ru": null
+    },
+    {
+      "class_id": 109,
+      "breed_key": "keeshond",
+      "name_en": "Keeshond",
+      "name_ru": null
+    },
+    {
+      "class_id": 110,
+      "breed_key": "brabancon_griffon",
+      "name_en": "Brabancon griffon",
+      "name_ru": null
+    },
+    {
+      "class_id": 111,
+      "breed_key": "pembroke",
+      "name_en": "Pembroke",
+      "name_ru": null
+    },
+    {
+      "class_id": 112,
+      "breed_key": "cardigan",
+      "name_en": "Cardigan",
+      "name_ru": null
+    },
+    {
+      "class_id": 113,
+      "breed_key": "toy_poodle",
+      "name_en": "Toy poodle",
+      "name_ru": null
+    },
+    {
+      "class_id": 114,
+      "breed_key": "miniature_poodle",
+      "name_en": "Miniature poodle",
+      "name_ru": null
+    },
+    {
+      "class_id": 115,
+      "breed_key": "standard_poodle",
+      "name_en": "Standard poodle",
+      "name_ru": null
+    },
+    {
+      "class_id": 116,
+      "breed_key": "mexican_hairless",
+      "name_en": "Mexican hairless",
+      "name_ru": null
+    },
+    {
+      "class_id": 117,
+      "breed_key": "dingo",
+      "name_en": "Dingo",
+      "name_ru": null
+    },
+    {
+      "class_id": 118,
+      "breed_key": "dhole",
+      "name_en": "Dhole",
+      "name_ru": null
+    },
+    {
+      "class_id": 119,
+      "breed_key": "african_hunting_dog",
+      "name_en": "African hunting dog",
+      "name_ru": null
+    }
+  ]
+}
