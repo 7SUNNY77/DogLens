@@ -55,3 +55,6 @@ dist/
 
 # The trained bundle is delivered as a release archive (scripts/package_bundle.py), never via Git
 artifacts/model_bundle/
+
+# Local developer-agent instructions (kept on disk, not published)
+CLAUDE.md
