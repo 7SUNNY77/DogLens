@@ -119,7 +119,8 @@ def pack(bundle_dir: Path, output_dir: Path, overwrite: bool) -> tuple[Path, str
             zf.writestr(info, (bundle_dir / name).read_bytes())
     tmp.replace(archive)
     digest = sha256_file(archive)
-    checksum_file.write_text(f"{digest}  {archive.name}\n", encoding="utf-8")
+    # LF on every OS so that `sha256sum -c` also works on Linux/macOS.
+    checksum_file.write_text(f"{digest}  {archive.name}\n", encoding="utf-8", newline="\n")
     return archive, digest
 
 

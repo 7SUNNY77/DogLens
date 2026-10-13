@@ -1,4 +1,4 @@
-# Repository setup proposals
+# Repository setup (done)
 
 Decisions (2026-10-13, owner): repository `7SUNNY77/DogLens`, public; code license MIT; model
 weights under [MODEL_TERMS.md](MODEL_TERMS.md); commit, push and release approved; no public deploy.

@@ -19,9 +19,9 @@ uv 0.11.7, torch 2.14.1+cpu.
 | A7 | Local Markdown links | PASS | 30 local links in 16 files, 0 broken. External links: only the two uv docs URLs (HTTP 200); no other external URLs checked |
 | A8 | Git hygiene | PASS | 97 files to commit, 7.5 MB, largest 2.1 MB (manifest); no dataset images, weights, archives, logits, SQLite, logs or absolute local paths |
 | A9 | Automated real-browser UI run (headless Chrome via DevTools protocol, clean copy) | PASS | 30/30 checks at 1366×900 and 390×844 (scratch script, not part of the repo). One earlier attempt failed only because of a race in the script (file input queried before render) |
-| A10 | GitHub Actions workflow on GitHub | NOT_RUN | the repository is not pushed |
-| A11 | Dependency installation for a new user from the internet | NOT_RUN | the clean copy was installed `--offline` from the local uv cache |
-| A12 | Platforms other than Windows (Linux/macOS) | NOT_RUN | expected through `uv.lock`; first evidence will be the CI Ubuntu job |
+| A10 | GitHub Actions workflow on GitHub | PASS | [run 38462373068](https://github.com/7SUNNY77/DogLens/actions/runs/38462373068) on `ed06bd8`: ubuntu-latest and windows-latest — install from lockfile, ruff, format, tests all green |
+| A11 | Dependency installation from the internet | PASS | CI runners installed everything from `uv.lock` without a cache (Ubuntu and Windows) |
+| A12 | Platforms other than Windows | PASS for Linux (CI: install + default tests); app launch on Linux and anything on macOS NOT_RUN | |
 
 ## 2. Manual checks by the owner
 
@@ -38,7 +38,7 @@ uv 0.11.7, torch 2.14.1+cpu.
 |---|---|---|
 | P1 | README.md (English) + README.ru.md, consistent, language links | PASS |
 | P2 | MODEL_CARD, EXTERNAL_VALIDATION, DEMO_GUIDE, DEVELOPMENT, REPOSITORY_SETUP | PASS |
-| P3 | CI workflow `.github/workflows/ci.yml` (Ubuntu + Windows) | PASS (written) / NOT_RUN on GitHub |
+| P3 | CI workflow `.github/workflows/ci.yml` (Ubuntu + Windows) | PASS (green on GitHub) |
 | P4 | Demo section in README | PASS |
 
 ## 4. Actions that need the owner's permission or decision
@@ -48,8 +48,8 @@ uv 0.11.7, torch 2.14.1+cpu.
 | R1 | Source-code license | PASS — MIT (`LICENSE`), owner's decision |
 | R2 | Terms for the trained model weights | PASS — `docs/MODEL_TERMS.md` (non-commercial research/education, attribution), delegated by the owner |
 | R3 | GitHub repository | PASS — `7SUNNY77/DogLens` |
-| R4 | First commit, tag, push | approved by the owner — see PROGRESS for the actual result |
-| R5 | GitHub Release v0.1.0 with the bundle archive | approved by the owner — see PROGRESS for the actual result |
+| R4 | Commits, tag, push | PASS — commits authored by the owner only, pushed to `main`, tag `v0.1.0` |
+| R5 | GitHub Release v0.1.0 with the bundle archive | PASS — [https://github.com/7SUNNY77/DogLens/releases/tag/v0.1.0](https://github.com/7SUNNY77/DogLens/releases/tag/v0.1.0); public download + SHA-256 + `verify` checked |
 | R6 | Verify the ImageNet / Stanford Dogs terms before any public use of dataset photos | NEEDS_OWNER |
 | R7 | Public deploy | not wanted (owner's decision) |
 
@@ -64,7 +64,11 @@ uv 0.11.7, torch 2.14.1+cpu.
   - the deterministic zip was unpacked to a temp directory, loaded, and inference ran with
     outgoing connections disabled;
   - `verify --extract-to artifacts` was run in the clean copy.
-- Published as an asset of release v0.1.0 (see PROGRESS for the actual upload result).
+- Published as an asset of [release v0.1.0](https://github.com/7SUNNY77/DogLens/releases/tag/v0.1.0). Downloaded anonymously from the public URL:
+  `sha256sum -c` OK, `package_bundle.py verify` OK.
+- Fixed during publishing: the `.zip.sha256` file was written with CRLF on Windows, which breaks
+  `sha256sum -c` on Linux/macOS. It is now written with LF (test added) and the asset was replaced;
+  the archive bytes and hash did not change.
 
 ## 6. Clean copy check (not a "fresh clone": the repository has no commits)
 

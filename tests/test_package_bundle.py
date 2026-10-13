@@ -36,7 +36,9 @@ def test_pack_verify_and_extract(tiny_bundle, tmp_path) -> None:
         "model_bundle/metrics.json",
         "model_bundle/weights.pt",
     ]
-    checksum = (dist / (archive.name + ".sha256")).read_text(encoding="utf-8").split()
+    raw_checksum = (dist / (archive.name + ".sha256")).read_bytes()
+    assert b"\r" not in raw_checksum  # `sha256sum -c` compatible on Linux/macOS
+    checksum = raw_checksum.decode("utf-8").split()
     assert checksum[1] == archive.name and len(checksum[0]) == 64
     # Deterministic bytes: rebuilding gives the same archive and checksum.
     first = archive.read_bytes()

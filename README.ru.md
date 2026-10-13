@@ -1,5 +1,7 @@
 # DogLens
 
+[![CI](https://github.com/7SUNNY77/DogLens/actions/workflows/ci.yml/badge.svg)](https://github.com/7SUNNY77/DogLens/actions/workflows/ci.yml)
+
 [English](README.md) · **Русский**
 
 DogLens подбирает породы, на которые собака на фото похожа больше всего. Вы загружаете фото,
@@ -141,7 +143,7 @@ uv run ruff check . && uv run ruff format --check .
 | Полное руководство разработчика | [docs/DEVELOPMENT.md](docs/DEVELOPMENT.md) |
 
 Минимальный workflow GitHub Actions ([.github/workflows/ci.yml](.github/workflows/ci.yml)) запускает
-ruff и основные тесты на Ubuntu и Windows. На GitHub он ещё не запускался.
+ruff и основные тесты на Ubuntu и Windows.
 
 ## Ограничения
 

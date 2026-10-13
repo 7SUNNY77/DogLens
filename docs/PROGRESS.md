@@ -12,8 +12,8 @@
 | UI в реальном браузере (автоматизация headless Chrome) | **проверен автоматически**, 30/30 |
 | Ручная приёмка владельцем | **частично**: владелец запустил UI в браузере (4 фото, всё изображение); ROI, отзыв, очистка и узкий экран владельцем ещё не подтверждены |
 | Внешняя проверка на своих фото | **not_performed** |
-| Оформление репозитория (README EN/RU, docs, CI-файл) | **готово**; CI на GitHub не запускался |
-| Публикация | разрешены commit, push и release; deploy не нужен. Фактический результат — ниже |
+| Оформление репозитория (README EN/RU, docs, CI) | **готово**; CI зелёный на GitHub (Ubuntu + Windows) |
+| Публикация | **выполнена**: [github.com/7SUNNY77/DogLens](https://github.com/7SUNNY77/DogLens), [релиз v0.1.0](https://github.com/7SUNNY77/DogLens/releases/tag/v0.1.0); deploy не нужен |
 
 Подробный чеклист — [RELEASE_CHECKLIST.md](RELEASE_CHECKLIST.md).
 
@@ -252,6 +252,14 @@
 - Демо: 3 скриншота владельца в `docs/assets/`. Скриншот с водяным знаком фотографа не добавлен.
 - Коммиты — только от имени владельца, без AI co-author.
 - Публичный deploy не нужен.
+- Публикация:
+  - создан публичный репозиторий `7SUNNY77/DogLens` с topics;
+  - push `main`: коммиты `437c862` и `ed06bd8` (`.gitattributes`, LF для файлов с контрольными
+    суммами), автор — только владелец;
+  - [CI](https://github.com/7SUNNY77/DogLens/actions/runs/38462373068) зелёный на Ubuntu и Windows;
+  - [релиз v0.1.0](https://github.com/7SUNNY77/DogLens/releases/tag/v0.1.0) с архивом bundle и `.zip.sha256`; публичное скачивание проверено
+    (`sha256sum -c` OK, `verify` OK).
+  - Исправлено: CRLF в `.zip.sha256` (`package_bundle.py` пишет LF, тест, asset заменён).
 
 ## Blocked / нужны решения пользователя
 - Полная ручная приёмка UI и систематическая внешняя проверка на своих фото с известной породой.
