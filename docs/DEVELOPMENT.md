@@ -1,7 +1,7 @@
 # DogLens — руководство разработчика
 
 Подробное техническое руководство: данные, обучение, оценка, bundle, приложение, проверки.
-Краткое описание продукта — в [README.md](../README.md) / [README.ru.md](../README.ru.md);
+Краткое описание продукта — в [README.md](../README.md) (русский) / [README.en.md](../README.en.md) (English);
 статус работ — в [PROGRESS.md](PROGRESS.md); инструкции для агента-разработчика — в
 [CLAUDE.md](../CLAUDE.md).
 

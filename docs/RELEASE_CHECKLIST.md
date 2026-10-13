@@ -36,7 +36,7 @@ uv 0.11.7, torch 2.14.1+cpu.
 
 | # | Item | Status |
 |---|---|---|
-| P1 | README.md (English) + README.ru.md, consistent, language links | PASS |
+| P1 | README.md (Russian, main) + README.en.md (English), consistent, language links | PASS |
 | P2 | MODEL_CARD, EXTERNAL_VALIDATION, DEMO_GUIDE, DEVELOPMENT, REPOSITORY_SETUP | PASS |
 | P3 | CI workflow `.github/workflows/ci.yml` (Ubuntu + Windows) | PASS (green on GitHub) |
 | P4 | Demo section in README | PASS |

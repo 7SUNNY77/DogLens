@@ -40,5 +40,5 @@ Keep the video small (MP4/WebM, ≤ 10 MB) or link it from a release instead of 
 
 ## After the assets exist
 
-Add a "Demo" section to both README.md and README.ru.md that references `docs/assets/...`
+Add a "Demo" section to both README.md (Russian) and README.en.md (English) that references `docs/assets/...`
 with relative paths, and check the links (see `docs/RELEASE_CHECKLIST.md`).

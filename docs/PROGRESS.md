@@ -222,7 +222,7 @@
     пишет только относительные пути;
   - меню Streamlit «Deploy» скрыто (`client.toolbarMode = "viewer"`).
 - Документация:
-  - README.md (EN) и README.ru.md;
+  - README.md (русский, основной) и README.en.md (английский);
   - `docs/DEVELOPMENT.md` — бывший подробный README;
   - `docs/DEMO_GUIDE.md`, `docs/REPOSITORY_SETUP.md`, уточнены EXTERNAL_VALIDATION и MODEL_CARD.
 - `.github/workflows/ci.yml`: Ubuntu + Windows, uv 0.11.7, `uv sync --frozen`, ruff, pytest.
