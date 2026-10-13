@@ -1,0 +1,7 @@
+# Keep LF everywhere: data/prepared files are verified by SHA-256 of their exact bytes
+# (preparation report, bundle metadata), so checkouts must not convert line endings.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.pt binary
+*.zip binary
