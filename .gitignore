@@ -56,5 +56,11 @@ dist/
 # The trained bundle is delivered as a release archive (scripts/package_bundle.py), never via Git
 artifacts/model_bundle/
 
-# Local developer-agent instructions (kept on disk, not published)
+# Local working notes (kept on disk, not published)
 CLAUDE.md
+docs/PROGRESS.md
+docs/IMPLEMENTATION_PLAN.md
+docs/RELEASE_CHECKLIST.md
+docs/REPOSITORY_SETUP.md
+docs/DEMO_GUIDE.md
+reports/train_smoke_test.json

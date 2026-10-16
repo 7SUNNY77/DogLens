@@ -1,4 +1,4 @@
-# DogLens training configuration. Values follow CLAUDE.md "Стартовая конфигурация".
+# DogLens training configuration (baseline values).
 seed: 42
 device: auto            # auto | cpu | cuda | mps ; explicit device must work or fail
 precision: float32

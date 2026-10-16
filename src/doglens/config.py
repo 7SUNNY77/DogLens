@@ -17,7 +17,7 @@ MIB = 1024 * 1024
 
 @dataclass(frozen=True)
 class ImageLimits:
-    """Upload limits from CLAUDE.md section 6."""
+    """Upload limits for user images."""
 
     max_bytes: int = 10 * MIB
     max_pixels: int = 20_000_000

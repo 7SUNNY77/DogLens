@@ -1,6 +1,6 @@
 # Эксперимент `effb0-seed42-exp1`
 
-Единственный полный CPU-эксперимент, разрешённый пользователем: 3 эпохи головы + до 5 эпох
+Единственный полный CPU-эксперимент: 3 эпохи головы + до 5 эпох
 fine-tuning с early stopping. Подбор гиперпараметров не проводился.
 
 ## Условия
@@ -10,7 +10,7 @@ fine-tuning с early stopping. Подбор гиперпараметров не 
 - Конфигурация: `configs/training.yaml` без изменений; копия — `artifacts/runs/effb0-seed42-exp1/resolved_config.yaml`.
 - Данные: train 9 551 / val 2 382 (manifest SHA-256 `396b1f63…`), mapping `d9779c77…`.
 - Инициализация backbone: `EfficientNet_B0_Weights.IMAGENET1K_V1`, SHA-256 `7f5810bc…4934`.
-- Git: коммитов в репозитории нет → `commit: null`, `dirty: true` (записано честно).
+- Git: эксперимент запущен до первого коммита → `commit: null`, `dirty: true`.
 
 ## Предварительный benchmark (`reports/train_benchmark.json`)
 
@@ -27,7 +27,7 @@ fine-tuning с early stopping. Подбор гиперпараметров не 
 
 - Batch на эпоху: 597 в train, 149 в val.
 - Прогноз: этап A — 6.4 мин/эпоха, этап B — 7.8 мин/эпоха; весь эксперимент без early stopping —
-  **58 мин** (≤ 2 ч, поэтому запуск разрешён).
+  **58 мин** (в пределах бюджета ≤ 2 ч).
 - Настройки производительности (число потоков, workers) не менялись.
 
 ## Ход запуска

@@ -1,6 +1,6 @@
 """Safe decoding of user uploads into a metadata-free, correctly oriented RGB image.
 
-Validation order (CLAUDE.md section 6):
+Validation order:
 byte size -> format by content -> dimensions/frames -> full decode -> EXIF transpose -> RGB.
 
 The file extension and the client-reported MIME type are never trusted. Nothing here logs

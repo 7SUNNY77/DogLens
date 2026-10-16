@@ -9,7 +9,7 @@
           <extract-to>/model_bundle (e.g. --extract-to artifacts).
 
 Weights, datasets and training checkpoints never go into Git; the archive is meant to be a
-GitHub Release asset once the owner publishes a release.
+GitHub Release asset.
 """
 
 from __future__ import annotations

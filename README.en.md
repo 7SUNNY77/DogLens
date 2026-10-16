@@ -13,8 +13,8 @@ The app runs locally on CPU. Its user interface is in Russian.
 
 > Status: **v0.1.0**, a local MVP with a trained model ([release](https://github.com/7SUNNY77/DogLens/releases/tag/v0.1.0)). The clean-copy
 > launch and the UI scenario were checked automatically, including in a real headless browser, and
-> the owner tried the app in a browser. A systematic external evaluation on new photos has **not**
-> been done yet. See [docs/RELEASE_CHECKLIST.md](docs/RELEASE_CHECKLIST.md).
+> the app was tried manually in a browser. A systematic external evaluation on new photos has **not**
+> been done yet.
 
 ## Features
 
@@ -29,7 +29,7 @@ The app runs locally on CPU. Its user interface is in Russian.
 
 ## Demo
 
-Screenshots of the app (Russian UI) with example photos supplied by the repository owner,
+Screenshots of the app (Russian UI) with example photos (not from Stanford Dogs),
 "use whole image" mode:
 
 ![Corgi: top-3 with scores](docs/assets/demo_cardigan.png)

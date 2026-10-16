@@ -50,7 +50,7 @@ BUNDLE_FILES: tuple[str, ...] = (
 
 
 class Verdict(StrEnum):
-    """User feedback on a prediction (CLAUDE.md section 10)."""
+    """User feedback on a prediction."""
 
     LOOKS_CORRECT = "looks_correct"
     LOOKS_WRONG = "looks_wrong"
